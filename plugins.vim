@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugins')
 
 " Git plugins
 " " Handles hunks and display diffs
