@@ -35,3 +35,6 @@ noremap <Right> :wincmd l<CR>
 
 " Source Plugins
 source $HOME/dotfiles/plugins.vim
+
+" Airline configuration
+source $HOME/dotfiles/airline.vim
