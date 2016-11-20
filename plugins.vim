@@ -6,6 +6,9 @@ Plug 'airblade/vim-gitgutter'
 " " Add a lot of git commands inside vim
 Plug 'tpope/vim-fugitive'
 
+" Change surrounding brackets/parentheses/etc. easily
+Plug 'tpope/vim-surround'
+
 " Rust plugins
 " " Syntax Highlighting
 Plug 'rust-lang/rust.vim'
