@@ -38,3 +38,7 @@ source $HOME/dotfiles/plugins.vim
 
 " Airline configuration
 source $HOME/dotfiles/airline.vim
+
+" Highlight trailing whitespaces
+autocmd BufWinEnter * let w:m3=matchadd('Space', '\s\+$\| \+\ze\t', -1)
+highlight Space ctermbg=darkblue
