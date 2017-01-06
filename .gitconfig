@@ -2,5 +2,7 @@
 	email = kelsey.zapata@scality.com
 	name = Kelsey Zapata
 	signingkey = kelsey.zapata@scality.com
+[core]
+	excludesfile = /home/kelsey/dotfiles/.gitignore_global
 [commit]
 	gpgsign = true
