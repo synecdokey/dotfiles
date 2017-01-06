@@ -4,5 +4,7 @@
 	signingkey = kelsey.zapata@scality.com
 [core]
 	excludesfile = /home/kelsey/dotfiles/.gitignore_global
+[init]
+	templatedir = ~/dotfiles/.git_template
 [commit]
 	gpgsign = true
