@@ -1,0 +1,6 @@
+[user]
+	email = kelsey.zapata@scality.com
+	name = Kelsey Zapata
+	signingkey = kelsey.zapata@scality.com
+[commit]
+	gpgsign = true
