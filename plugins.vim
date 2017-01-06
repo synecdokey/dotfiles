@@ -1,5 +1,8 @@
 call plug#begin('~/.config/nvim/plugins')
 
+" Code completion & navigation
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --racer-completer' }
+
 " Git plugins
 " " Handles hunks and display diffs
 Plug 'airblade/vim-gitgutter'
