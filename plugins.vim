@@ -19,6 +19,8 @@ Plug 'pearofducks/ansible-vim'
 Plug 'cespare/vim-toml'
 " " Typescript
 Plug 'leafgarland/typescript-vim'
+" " Vue components
+Plug 'posva/vim-vue'
 
 " Rust plugins
 " " Syntax Highlighting
