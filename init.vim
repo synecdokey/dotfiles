@@ -36,6 +36,8 @@ noremap <Right> :wincmd l<CR>
 " Source Plugins
 source $HOME/dotfiles/plugins.vim
 
+let g:ycm_server_python_interpreter = 'python'
+
 " Airline configuration
 source $HOME/dotfiles/airline.vim
 
