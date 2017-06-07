@@ -27,6 +27,7 @@ Plug 'posva/vim-vue'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " " Code completion & navigation
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
+Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rust' }
 
 " Airline - better status line
 Plug 'vim-airline/vim-airline'
