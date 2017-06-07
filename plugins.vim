@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugins')
 
 " Code completion & navigation
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --racer-completer' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Git plugins
 " " Handles hunks and display diffs

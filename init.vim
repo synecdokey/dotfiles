@@ -36,7 +36,8 @@ noremap <Right> :wincmd l<CR>
 " Source Plugins
 source $HOME/dotfiles/plugins.vim
 
-let g:ycm_server_python_interpreter = 'python'
+" Give deoplete an hint to start
+let g:deoplete#enable_at_startup = 1
 
 " Airline configuration
 source $HOME/dotfiles/airline.vim
