@@ -16,17 +16,17 @@ Plug 'tpope/vim-surround'
 " " Ansible
 Plug 'pearofducks/ansible-vim'
 " " TOML
-Plug 'cespare/vim-toml'
+Plug 'cespare/vim-toml', { 'for': 'toml' }
 " " Typescript
-Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 " " Vue components
 Plug 'posva/vim-vue'
 
 " Rust plugins
 " " Syntax Highlighting
-Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " " Code completion & navigation
-Plug 'racer-rust/vim-racer'
+Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 
 " Airline - better status line
 Plug 'vim-airline/vim-airline'
