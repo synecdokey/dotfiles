@@ -12,7 +12,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Use the dvorak layout in X
-setxkbmap -layout us -variant dvorak-alt-intl -options "caps:escape"
+setxkbmap -layout us -variant dvorak-alt-intl -option "caps:escape"
 
 # Load a resource database
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
