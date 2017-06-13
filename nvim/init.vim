@@ -34,13 +34,13 @@ noremap <Up> :wincmd k<CR>
 noremap <Right> :wincmd l<CR>
 
 " Source Plugins
-source $HOME/dotfiles/plugins.vim
+source $XDG_CONFIG_HOME/nvim/plugins.vim
 
 " Give deoplete an hint to start
 let g:deoplete#enable_at_startup = 1
 
 " Airline configuration
-source $HOME/dotfiles/airline.vim
+source $XDG_CONFIG_HOME/nvim/airline.vim
 
 " Highlight trailing whitespaces
 autocmd BufWinEnter * let w:m3=matchadd('Space', '\s\+$\| \+\ze\t', -1)
