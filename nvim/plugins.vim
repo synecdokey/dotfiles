@@ -15,6 +15,8 @@ Plug 'tpope/vim-surround'
 " Better syntax highlighting
 " " Ansible
 Plug 'pearofducks/ansible-vim'
+" " Fish
+Plug 'dag/vim-fish'
 " " TOML
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 " " Typescript
