@@ -14,7 +14,7 @@ URxvt.keysym.C-Down: perl:font-size:decrease
 
 ! Settings
 URxvt.scrollBar: off
-URxvt.font: xft:Fira Mono:pixelsize=16
+URxvt.font: xft:Source Code Pro:size=16
 Xft.antialias: true
 Xft.dpi: 96
 
