@@ -6,3 +6,5 @@
 	excludesfile = ~/.config/git/ignore_global
 [init]
 	templatedir = ~/.config/git/template
+[commit]
+	gpgsign = true
