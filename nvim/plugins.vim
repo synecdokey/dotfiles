@@ -17,12 +17,14 @@ Plug 'tpope/vim-surround'
 Plug 'pearofducks/ansible-vim'
 " " Fish
 Plug 'dag/vim-fish'
+" " Javascript
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" " JSX
+Plug 'MaxMEllon/vim-jsx-pretty', { 'for': 'javascript' }
 " " TOML
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 " " Typescript
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-" " Vue components
-Plug 'posva/vim-vue'
 
 " Rust plugins
 " " Syntax Highlighting

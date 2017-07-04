@@ -39,6 +39,12 @@ source $XDG_CONFIG_HOME/nvim/plugins.vim
 " Give deoplete an hint to start
 let g:deoplete#enable_at_startup = 1
 
+" pangloss/vim-javascript configuration
+" " Highlight JSDOC
+let g:javascript_plugin_jsdoc = 1
+" " Highlight flow annotations
+let g:javascript_plugin_flow = 1
+
 " Airline configuration
 source $XDG_CONFIG_HOME/nvim/airline.vim
 
