@@ -7,6 +7,8 @@ set number
 syntax on
 " " Show matching brackets
 set showmatch
+" " Mode is already shown in the statusbar, hide it
+set noshowmode
 
 " Search Settings
 " " Move cursor while searching
