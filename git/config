@@ -6,5 +6,9 @@
 	excludesfile = ~/.config/git/ignore_global
 [init]
 	templatedir = ~/.config/git/template
+[merge]
+	ff = false
+[fetch]
+	prune = true
 [commit]
 	gpgsign = true
