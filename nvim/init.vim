@@ -35,6 +35,9 @@ noremap <Down> :wincmd j<CR>
 noremap <Up> :wincmd k<CR>
 noremap <Right> :wincmd l<CR>
 
+" Add elm filetype detection
+autocmd BufRead,BufNewFile *.elm set filetype=elm
+
 " Source Plugins
 source $XDG_CONFIG_HOME/nvim/plugins.vim
 

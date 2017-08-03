@@ -16,7 +16,7 @@ Plug 'tpope/vim-surround'
 " " Ansible
 Plug 'pearofducks/ansible-vim'
 " " Elm
-Plug 'ElmCast/elm-vim'
+Plug 'ElmCast/elm-vim', { 'for': 'elm' }
 " " Fish
 Plug 'dag/vim-fish'
 " " Javascript
