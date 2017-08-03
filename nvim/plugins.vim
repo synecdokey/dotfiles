@@ -14,11 +14,11 @@ Plug 'tpope/vim-surround'
 
 " Better syntax highlighting
 " " Ansible
-Plug 'pearofducks/ansible-vim'
+Plug 'pearofducks/ansible-vim', { 'for': 'yaml' }
 " " Elm
 Plug 'ElmCast/elm-vim', { 'for': 'elm' }
 " " Fish
-Plug 'dag/vim-fish'
+Plug 'dag/vim-fish', { 'for': 'fish' }
 " " Javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " " JSX
