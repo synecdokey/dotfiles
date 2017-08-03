@@ -15,6 +15,8 @@ Plug 'tpope/vim-surround'
 " Better syntax highlighting
 " " Ansible
 Plug 'pearofducks/ansible-vim'
+" " Elm
+Plug 'ElmCast/elm-vim'
 " " Fish
 Plug 'dag/vim-fish'
 " " Javascript
