@@ -45,3 +45,31 @@ in emacs.
 
 (eval-when-compile (require 'use-package))
 #+END_SRC
+
+* Vim experience
+
+Disclaimer: I am a vim user at heart. I will try to emulate all the good parts.
+
+** Install it
+
+Evil mode is the emacs plugin that is allowing me to switch from vim to emacs.
+It provides a complete modal interface in line with the vanilla vim
+experience, which is the main thing I cannot edit without.
+
+#+BEGIN_SRC emacs-lisp
+(use-package evil
+  :init
+  (evil-mode 1))
+#+END_SRC
+
+** Install =evil-surround=
+
+It's one of the most interesting edition plugin available for vim, no
+reason not to use it here.
+
+#+BEGIN_SRC emacs-lisp
+(use-package evil-surround
+  :after evil
+  :init
+  (global-evil-surround-mode 1))
+#+END_SRC
