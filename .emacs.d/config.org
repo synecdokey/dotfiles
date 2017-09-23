@@ -12,7 +12,8 @@ layout.
 #+BEGIN_SRC emacs-lisp
 (setq inhibit-splash-screen t
       inhibit-startup-message t
-      inhibit-startup-echo-area-message t)
+      inhibit-startup-echo-area-message t
+      initial-scratch-message nil)
 #+END_SRC
 
 ** Keep the GUI minimalistic
@@ -26,11 +27,91 @@ keyboard-driven workflows, remove every visible bar, keeping only the mode-line.
 (scroll-bar-mode -1)
 #+END_SRC
 
-** Package management
+** Sane defaults
 
-*** Use a package manager
+Most of them are inspired by https://github.com/hrs/sensible-defaults.el
+
+*** 80 columns
+
+I like having multiple buffers open at the same time, a 80 columns workflow
+works best like this.
+
+#+BEGIN_SRC emacs-lisp
+(setq-default fill-column 80)
+#+END_SRC
+
+*** Display column number
+
+It's a useful info to get in the mode-line, and it doesn't take much space either.
+
+#+BEGIN_SRC emacs-lisp
+(setq column-number-mode t)
+#+END_SRC
+
+*** Whitespaces
+
+I used to highlight them, but removing them is fine by me.
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+#+END_SRC
+
+*** Garbage collection
+
+Lisp is a GC'ed language. Upgrade the GC threshold from 0.76MB to 20MB, for
+some speed-ups.
+
+#+BEGIN_SRC emacs-lisp
+(setq gc-cons-threshold 20000000)
+#+END_SRC
+
+*** No typewriter shenanigans
+
+One space after a period is enough.
+
+#+BEGIN_SRC emacs-lisp
+(setq sentence-end-double-space nil)
+#+END_SRC
+
+*** CamelCase improvements
+
+Treat CamelCasedWords as separate words. That's something I've never seen
+in vim, thanks elisp!
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'prog-mode-hook 'subword-mode)
+#+END_SRC
+
+*** Syntax Highlighting
+
+Use it whenever possible.
+
+#+BEGIN_SRC emacs-lisp
+(global-font-lock-mode t)
+#+END_SRC
+
+*** Mouse yank
+
+By default, it inserts where the mouse cursor is. Insert at the current cursor point instead.
+
+#+BEGIN_SRC emacs-lisp
+(setq mouse-yank-at-point t)
+#+END_SRC
+
+*** Shorten question
+
+It quickly gets cumbersome to type 'yes' each time.
+
+#+BEGIN_SRC emacs-lisp
+(fset 'yes-or-no-p 'y-or-n-p)
+#+END_SRC
+
+* Package management
 
 As a vim user, I am used to have a package manager taking care of things for me.
+
+** Use a package manager
+
 [[https://github.com/jwiegley/use-package][=use-package=]] is the most advanced
 one, allowing lazy-loading and fine-grained control that is not found by default
 in emacs.
@@ -72,4 +153,39 @@ reason not to use it here.
   :after evil
   :init
   (global-evil-surround-mode 1))
+#+END_SRC
+
+** Some default config
+
+Vim has a certain behaviour by default.
+
+*** Matching parentheses highlight
+
+It's a small detail, sure, but it's a nice one.
+
+#+BEGIN_SRC emacs-lisp
+(show-paren-mode t)
+(setq show-paren-delay 0.0)
+#+END_SRC
+
+*** Newline at the end of a file
+
+POSIX compliance is expected from some tools, let's keep them happy.
+
+#+BEGIN_SRC emacs-lisp
+(setq require-final-newline 1)
+#+END_SRC
+
+*** Do not bind =RET= and =SPC=
+
+As they are redundant with =j= and =l= respectively, do not let evil take precedence there.
+
+#+BEGIN_SRC emacs-lisp
+(defun my-move-key (keymap-from keymap-to key)
+  "Moves key binding from one keymap to another, deleting from the old location."
+  (define-key keymap-to key (lookup-key keymap-from key))
+  (define-key keymap-from key nil))
+
+(my-move-key evil-motion-state-map evil-normal-state-map (kbd "RET"))
+(my-move-key evil-motion-state-map evil-normal-state-map " ")
 #+END_SRC
