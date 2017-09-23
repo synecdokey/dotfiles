@@ -1,13 +1,3 @@
- ;; Keep starting screen clean
-(setq inhibit-splash-screen t
-      inhibit-startup-message t
-      inhibit-startup-echo-area-message t)
-
- ;; Let's be minimalistic
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
@@ -19,3 +9,5 @@
  '(package-selected-packages (quote (evil))))
 (require 'evil)
 (evil-mode 1)
+
+(org-babel-load-file "~/.emacs.d/config.org")

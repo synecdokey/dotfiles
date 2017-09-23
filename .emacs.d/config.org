@@ -1,0 +1,26 @@
+#+TITLE: Emacs configuration
+#+AUTHOR: Michael Zapata
+#+EMAIL: michael.zapata@protonmail.com
+
+* Basic configuration
+
+** Keep the starting screen clean
+
+Once you've gone through the tutorial, there's no need to keep that stuff around.
+
+#+BEGIN_SRC emacs-lisp
+(setq inhibit-splash-screen t
+      inhibit-startup-message t
+      inhibit-startup-echo-area-message t)
+#+END_SRC
+
+** Keep the GUI minimalistic
+
+As I want my editor to get as much screen estate as possible, and prefer keyboard-driven
+workflows, remove every visible bar, keeping only the mode-line.
+
+#+BEGIN_SRC emacs-lisp
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+#+END_SRC
