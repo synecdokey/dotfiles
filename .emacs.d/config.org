@@ -6,7 +6,8 @@
 
 ** Keep the starting screen clean
 
-Once you've gone through the tutorial, there's no need to keep that stuff around.
+Once you've gone through the tutorial, there's no real need to keep the startup
+layout.
 
 #+BEGIN_SRC emacs-lisp
 (setq inhibit-splash-screen t
@@ -16,11 +17,31 @@ Once you've gone through the tutorial, there's no need to keep that stuff around
 
 ** Keep the GUI minimalistic
 
-As I want my editor to get as much screen estate as possible, and prefer keyboard-driven
-workflows, remove every visible bar, keeping only the mode-line.
+As I want my editor to get as much screen estate as possible, and prefer
+keyboard-driven workflows, remove every visible bar, keeping only the mode-line.
 
 #+BEGIN_SRC emacs-lisp
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+#+END_SRC
+
+** Package management
+
+*** Use a package manager
+
+As a vim user, I am used to have a package manager taking care of things for me.
+[[https://github.com/jwiegley/use-package][=use-package=]] is the most advanced
+one, allowing lazy-loading and fine-grained control that is not found by default
+in emacs.
+
+#+BEGIN_SRC emacs-lisp
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(setq use-package-verbose t)
+(setq use-package-always-ensure t)
+
+(eval-when-compile (require 'use-package))
 #+END_SRC
