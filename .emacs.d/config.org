@@ -147,6 +147,15 @@ the right glyphs instead of your standard garbled unicode icon.
   (load-theme 'zerodark t))
 #+END_SRC
 
+*** Static checker
+
+Use =flycheck=, it seems to be the standard in there.
+
+#+BEGIN_SRC emacs-lisp
+(use-package flycheck
+  :init (global-flycheck-mode))
+#+END_SRC
+
 * Vim experience
 
 Disclaimer: I am a vim user at heart. I will try to emulate all the good parts.
