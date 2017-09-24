@@ -127,6 +127,21 @@ in emacs.
 (eval-when-compile (require 'use-package))
 #+END_SRC
 
+** Plugins
+
+Plugins are the bread and butter of an emacs workflow, there's a few nice things
+in there!
+
+*** Theme
+
+As I spend a lot of time in my editor, I might as well make it pretty!
+
+#+BEGIN_SRC emacs-lisp
+(use-package zerodark-theme
+  :config
+  (load-theme 'zerodark t))
+#+END_SRC
+
 * Vim experience
 
 Disclaimer: I am a vim user at heart. I will try to emulate all the good parts.
