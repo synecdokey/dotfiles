@@ -48,6 +48,13 @@ It's a useful info to get in the mode-line, and it doesn't take much space eithe
 (setq column-number-mode t)
 #+END_SRC
 
+*** Line numbers in the gutter
+
+I find having numbers helps me navigate around more quickly with =j=/=k=.
+
+#+BEGIN_SRC emacs-lisp
+(global-linum-mode t)
+#+END_SRC
 *** Whitespaces
 
 I used to highlight them, but removing them is fine by me.
