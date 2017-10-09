@@ -4,6 +4,7 @@
 	signingkey = kelsey.zapata@scality.com
 [core]
 	excludesfile = ~/.config/git/ignore_global
+	pager = less -RSFX
 [init]
 	templatedir = ~/.config/git/template
 [merge]
