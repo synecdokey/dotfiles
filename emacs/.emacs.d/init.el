@@ -5,4 +5,6 @@
 (package-initialize)
 
  ;; load config from org file
+(org-babel-load-file "~/.emacs.d/proxy.org")
+ ;; load config from org file
 (org-babel-load-file "~/.emacs.d/config.org")

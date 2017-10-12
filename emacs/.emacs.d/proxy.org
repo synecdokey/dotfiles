@@ -1,0 +1,7 @@
+* Proxy configuration
+
+Sometimes you need a proxy at your job. I know I do.
+
+#+BEGIN_SRC emacs-lisp
+
+#+END_SRC
