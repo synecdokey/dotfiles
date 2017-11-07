@@ -38,6 +38,16 @@ I am partial to Adobe Source Code Pro for some reason.
 
 Most of them are inspired by https://github.com/hrs/sensible-defaults.el
 
+*** Temporary files management
+
+Let's be honest, =emacs= leaves a lot of temporary files, and I like my listings
+to be clean.
+
+#+BEGIN_SRC emacs-lisp
+(setq backup-directory-alist `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
+#+END_SRC
+
 *** 80 columns
 
 I like having multiple buffers open at the same time, a 80 columns workflow
