@@ -27,6 +27,13 @@ keyboard-driven workflows, remove every visible bar, keeping only the mode-line.
 (scroll-bar-mode -1)
 #+END_SRC
 
+** Set default font
+
+I am partial to Adobe Source Code Pro for some reason.
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'default-frame-alist '(font . "Source Code Pro-10"))
+#+END_SRC
+
 ** Sane defaults
 
 Most of them are inspired by https://github.com/hrs/sensible-defaults.el
