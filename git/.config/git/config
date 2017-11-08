@@ -1,7 +1,6 @@
 [user]
 	email = kelsey.zapata@scality.com
 	name = Kelsey Zapata
-	signingkey = kelsey.zapata@scality.com
 [core]
 	excludesfile = ~/.config/git/ignore_global
 	pager = less -RSFX
@@ -11,5 +10,3 @@
 	ff = false
 [fetch]
 	prune = true
-[commit]
-	gpgsign = true
