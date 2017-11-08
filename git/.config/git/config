@@ -6,7 +6,5 @@
 	pager = less -RSFX
 [init]
 	templatedir = ~/.config/git/template
-[merge]
-	ff = false
 [fetch]
 	prune = true
