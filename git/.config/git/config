@@ -1,6 +1,6 @@
 [user]
-	email = kelsey.zapata@scality.com
 	name = Kelsey Zapata
+	email = kelseyz@wetafx.co.nz
 [core]
 	excludesfile = ~/.config/git/ignore_global
 	pager = less -RSFX
