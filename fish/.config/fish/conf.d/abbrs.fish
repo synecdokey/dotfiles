@@ -1,5 +1,4 @@
 if not set -q fish_initialised
-    abbr -a vi nvim
-    abbr -a vim nvim
+    abbr -a vi vim
     set -U fish_initialised
 end

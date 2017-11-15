@@ -1,2 +1,2 @@
 set -xg XDG_CONFIG_HOME ~/.config
-set -xg VISUAL nvim
+set -xg VISUAL vim
