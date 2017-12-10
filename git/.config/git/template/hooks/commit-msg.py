@@ -12,7 +12,7 @@ from subprocess import call
 valid_commit_types = ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'chore']
 
 is_piped = True if len(sys.argv) == 1 else False
-editor = os.environ.get('EDITOR', 'vim')
+editor = os.environ.get('VISUAL', 'vim')
 
 def bad_commit(errmsg, line=""):
     sys.stderr.write("\nThe following line does not follow our "
