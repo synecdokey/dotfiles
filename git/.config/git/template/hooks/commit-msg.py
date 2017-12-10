@@ -85,7 +85,7 @@ while True:
     # We catch that an error has happened and react accordingly
     except SyntaxError as err:
         if raw_input("Do you want to edit it? (Your commit will "
-                "be rejected otherwise) [Y/n] ").lower() == 'y':
+                "be rejected otherwise) [y/N] ").lower() == 'y':
             commit.write("#\n# %s\n#" % err)
             sys.stderr.write('\n')
             commit.close()
