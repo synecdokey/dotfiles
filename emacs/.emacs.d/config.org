@@ -190,6 +190,14 @@ packages enhancing it if need be.
   :init (global-company-mode))
 #+END_SRC
 
+** Erlang
+
+I'm using erlang around here. \o/
+#+BEGIN_SRC emacs-lisp
+(use-package erlang
+  :ensure t)
+#+END_SRC
+
 * Vim experience
 
 Disclaimer: I am a vim user at heart. I will try to emulate all the good parts.
