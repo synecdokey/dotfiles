@@ -180,6 +180,16 @@ Use =flycheck=, it seems to be the standard in there.
   :init (global-flycheck-mode))
 #+END_SRC
 
+*** Auto-complete
+
+=company-mode= works well enough for me, and there's plenty of 3rd-party
+packages enhancing it if need be.
+
+#+BEGIN_SRC emacs-lisp
+(use-package company
+  :init (global-company-mode))
+#+END_SRC
+
 * Vim experience
 
 Disclaimer: I am a vim user at heart. I will try to emulate all the good parts.
