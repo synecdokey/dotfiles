@@ -3,9 +3,10 @@
 I need a proxy to access MELPA repositories at work, here is where I put it.
 
 #+BEGIN_SRC emacs-lisp
-(setq url-proxy-services '(("no_proxy" . "wetafx.co.nz")
-  ("http" . "www-proxy.wetafx.co.nz:3128")
-  ("https" . "www-proxy.wetafx.co.nz:3128")
-  ("ftp" . "www-proxy.wetafx.co.nz:3128")
-))
+(when (string= (system-name) "hungerford") (
+  setq url-proxy-services '(("no_proxy" . "wetafx.co.nz")
+    ("http" . "www-proxy.wetafx.co.nz:3128")
+    ("https" . "www-proxy.wetafx.co.nz:3128")
+    ("ftp" . "www-proxy.wetafx.co.nz:3128")
+)))
 #+END_SRC
