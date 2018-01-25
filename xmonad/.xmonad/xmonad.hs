@@ -1,5 +1,6 @@
 import XMonad
+import XMonad.Config.Desktop
 
-main = xmonad def {
-    terminal = "urxvt",
+main = xmonad desktopConfig {
+    terminal = "urxvt -e fish"
 }
