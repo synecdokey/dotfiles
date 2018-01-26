@@ -200,7 +200,12 @@ looks great by default!
 (use-package ox-twbs)
 #+END_SRC
 
-** Erlang
+** Language modes
+
+Emacs doesn't necessarily have the best coverage when it comes to programming
+languages, but that's ok, you can find modes for pretty much every language.
+
+*** Erlang
 
 I'm using erlang around here. \o/
 #+BEGIN_SRC emacs-lisp
