@@ -213,6 +213,16 @@ I'm using erlang around here. \o/
   :ensure t)
 #+END_SRC
 
+*** Rust
+
+That mode doesn't set itself to the =auto-mode-alist=, so we need to do that
+ourselves. Thankfully, =use-package= is giving us some help there.
+
+#+BEGIN_SRC emacs-lisp
+(use-package rust-mode
+  :mode "\\.rs\\'")
+#+END_SRC
+
 * Vim experience
 
 Disclaimer: I am a vim user at heart. I will try to emulate all the good parts.
