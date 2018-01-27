@@ -156,21 +156,6 @@ in emacs.
 Plugins are the bread and butter of an emacs workflow, there's a few nice things
 in there!
 
-*** Theme
-
-As I spend a lot of time in my editor, I might as well make it pretty! I also
-use the themed modeline, for now.
-
-Note: =M-x all-the-icons-install-fonts= should be called to make the line display
-the right glyphs instead of your standard garbled unicode icon.
-
-#+BEGIN_SRC emacs-lisp
-(use-package zerodark-theme
-  :config
-  (zerodark-setup-modeline-format)
-  (load-theme 'zerodark t))
-#+END_SRC
-
 *** Static checker
 
 Use =flycheck=, it seems to be the standard in there.
