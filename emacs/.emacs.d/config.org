@@ -1,6 +1,6 @@
 #+TITLE: Emacs configuration
-#+AUTHOR: Michael Zapata
-#+EMAIL: michael.zapata@protonmail.com
+#+AUTHOR: Kelsey Zapata
+#+EMAIL: kelseyz@wetafx.co.nz
 
 * Basic configuration
 
