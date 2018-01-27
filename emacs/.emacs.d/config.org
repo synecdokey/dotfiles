@@ -194,6 +194,19 @@ looks great by default!
 (use-package ox-twbs)
 #+END_SRC
 
+*** Minibuffer completion
+
+Makes completing command a slightly better experience.
+
+#+BEGIN_SRC emacs-lisp
+(use-package ivy
+  :config
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-count-format "(%d/%d) ")
+  :init (ivy-mode t)
+)
+#+END_SRC
+
 ** Language modes
 
 Emacs doesn't necessarily have the best coverage when it comes to programming
