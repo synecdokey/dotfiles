@@ -156,6 +156,15 @@ in emacs.
 Plugins are the bread and butter of an emacs workflow, there's a few nice things
 in there!
 
+*** Theme
+
+Moe is a nice theme that switches between light and dark by itself, neat!
+
+#+BEGIN_SRC emacs-lisp
+(use-package moe-theme
+  :init (require 'moe-theme-switcher))
+#+END_SRC
+
 *** Static checker
 
 Use =flycheck=, it seems to be the standard in there.
