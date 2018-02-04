@@ -233,7 +233,7 @@ I'm using erlang around here. \o/
 
 *** Rust
 
-That mode doesn't set itself to the =auto-mode-alist=, so we need to do that
+That mode doesn't append itself to the =auto-mode-alist=, so we need to do that
 ourselves. Thankfully, =use-package= is giving us some help there.
 
 #+BEGIN_SRC emacs-lisp
