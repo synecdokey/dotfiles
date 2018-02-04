@@ -156,6 +156,15 @@ in emacs.
 Plugins are the bread and butter of an emacs workflow, there's a few nice things
 in there!
 
+*** Cleaner modeline
+
+I have a lot of minor modes running most of the time, which makes the modeline
+slightly overloaded. =diminish= is well-integrated with =use-package=.
+
+#+BEGIN_SRC emacs-lisp
+(use-package diminish)
+#+END_SRC
+
 *** Theme
 
 Moe is a nice theme that switches between light and dark by itself, neat!
@@ -181,7 +190,8 @@ packages enhancing it if need be.
 
 #+BEGIN_SRC emacs-lisp
 (use-package company
-  :init (global-company-mode))
+  :init (global-company-mode)
+  :diminish)
 #+END_SRC
 
 *** Fancy HTML export
@@ -204,6 +214,7 @@ Makes completing command a slightly better experience.
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) ")
   :init (ivy-mode t)
+  :diminish
 )
 #+END_SRC
 
@@ -257,8 +268,8 @@ experience, which is the main thing I cannot edit without.
 
 #+BEGIN_SRC emacs-lisp
 (use-package evil
-  :init
-  (evil-mode 1))
+  :init (evil-mode 1)
+  :config (diminish 'undo-tree-mode))
 #+END_SRC
 
 ** Install =evil-surround=
