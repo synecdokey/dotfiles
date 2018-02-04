@@ -230,6 +230,21 @@ ourselves. Thankfully, =use-package= is giving us some help there.
   :mode "\\.rs\\'")
 #+END_SRC
 
+But that's not enough, as =rust-mode= does not offer a completion engine by
+default. For that, we use the completion engine that every editor uses:
+[[https://github.com/racer-rust/racer][=racer=]]. It needs to be installed using =cargo install racer= beforehand.
+
+Note: I use =:config= since I cannot get =:hook= to work properly there for
+some reason.
+
+#+BEGIN_SRC emacs-lisp
+(use-package racer
+  :after (rust-mode company)
+  :config (add-hook 'rust-mode-hook #'racer-mode)
+          (add-hook 'racer-mode-hook #'eldoc-mode)
+          (add-hook 'racer-mode-hook #'company-mode))
+#+END_SRC
+
 * Vim experience
 
 Disclaimer: I am a vim user at heart. I will try to emulate all the good parts.
