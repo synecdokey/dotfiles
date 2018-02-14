@@ -2,6 +2,7 @@
 	name = Kelsey Zapata
 	email = kelseyz@wetafx.co.nz
 [core]
+	editor = emacsclient
 	excludesfile = ~/.config/git/ignore_global
 	pager = less -RSFX
 [init]
