@@ -2,5 +2,5 @@
 
 These dotfiles are meant to be used in coordination with GNU =stow=.
 
-The =vim= configuration is meant to disappear once I get my =emacs= configuration
-the way I want it.
+They mostly deal with my window manager (=xmonad=) and my editor (=emacs=)
+configuration.
