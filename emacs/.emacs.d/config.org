@@ -256,6 +256,15 @@ some reason.
           (add-hook 'racer-mode-hook #'company-mode))
 #+END_SRC
 
+*** Haskell
+
+I'm hacking on my xmonad config, so this is useful. And I really should get
+back in it at some point too.
+
+#+BEGIN_SRC emacs-lisp
+(use-package haskell-mode)
+#+END_SRC
+
 * Vim experience
 
 Disclaimer: I am a vim user at heart. I will try to emulate all the good parts.
