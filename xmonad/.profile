@@ -1,1 +1,2 @@
 ./.fehbg
+emacs --daemon
