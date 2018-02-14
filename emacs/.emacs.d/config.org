@@ -318,3 +318,11 @@ As they are redundant with =j= and =l= respectively, do not let evil take preced
 (my-move-key evil-motion-state-map evil-normal-state-map (kbd "RET"))
 (my-move-key evil-motion-state-map evil-normal-state-map " ")
 #+END_SRC
+
+*** Use modes when commiting
+
+It's seriously super annoying to not be able to.
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'with-editor-mode-hook 'evil-insert-state)
+#+END_SRC
