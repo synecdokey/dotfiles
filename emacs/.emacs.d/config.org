@@ -335,3 +335,26 @@ It's seriously super annoying to not be able to.
 #+BEGIN_SRC emacs-lisp
 (add-hook 'with-editor-mode-hook 'evil-insert-state)
 #+END_SRC
+
+* Org mode tweaks
+
+I'm starting to dive more into the org ecosystem.
+
+** Publishing list
+
+Org offers facilities to automate most of the publishing itself, which
+is better than handling all of that by hand!
+
+#+BEGIN_SRC emacs-lisp
+(setq org-publish-project-alist
+    '(("public-notes"
+       :base-directory "~/org/"
+       :base-extension "org"
+       :publishing-directory "~/org/public/"
+       :recursive t
+       :publishing-function org-twbs-publish-to-html)
+    )
+)
+#+END_SRC
+
+And that's about it really.
