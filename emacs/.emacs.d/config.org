@@ -357,4 +357,12 @@ is better than handling all of that by hand!
 )
 #+END_SRC
 
+** Syntax highlighting in code blocks
+
+It's kinda useful to avoid silly typos in code examples.
+
+#+BEGIN_SRC emacs-lisp
+(setq org-src-fontify-natively t)
+#+END_SRC
+
 And that's about it really.
