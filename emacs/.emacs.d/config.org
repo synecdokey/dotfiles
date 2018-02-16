@@ -202,16 +202,6 @@ packages enhancing it if need be.
   :diminish)
 #+END_SRC
 
-*** Fancy HTML export
-
-The default org-mode html export function is not really producing beautiful
-html files. This plugin is using twitter bootstrap, but for orgmode, and it
-looks great by default!
-
-#+BEGIN_SRC emacs-lisp
-(use-package ox-twbs)
-#+END_SRC
-
 *** Minibuffer completion
 
 Makes completing command a slightly better experience.
@@ -381,6 +371,16 @@ It uses the major mode settings to infer tabs, smart!
 
 #+BEGIN_SRC emacs-lisp
 (setq org-src-tab-acts-natively t)
+#+END_SRC
+
+** Fancy HTML export
+
+The default org-mode html export function is not really producing beautiful
+html files. This plugin is using twitter bootstrap, but for orgmode, and it
+looks great by default!
+
+#+BEGIN_SRC emacs-lisp
+(use-package ox-twbs)
 #+END_SRC
 
 ** Spell checking
