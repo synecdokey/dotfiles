@@ -383,4 +383,13 @@ It uses the major mode settings to infer tabs, smart!
 (setq org-src-tab-acts-natively t)
 #+END_SRC
 
+** Spell checking
+
+While I do consider my English to be mostly okay, I still make mistakes. Worse,
+I may not realise it.
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'org-mode-hook 'flyspell-mode)
+#+END_SRC
+
 And that's about it really.
