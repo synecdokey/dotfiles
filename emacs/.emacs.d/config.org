@@ -30,6 +30,7 @@ keyboard-driven workflows, remove every visible bar, keeping only the mode-line.
 ** Set default font
 
 I am partial to Adobe Source Code Pro for some reason.
+
 #+BEGIN_SRC emacs-lisp
 (add-to-list 'default-frame-alist '(font . "Source Code Pro-10"))
 #+END_SRC
@@ -72,6 +73,7 @@ I find having numbers helps me navigate around more quickly with =j=/=k=.
 #+BEGIN_SRC emacs-lisp
 (global-linum-mode t)
 #+END_SRC
+
 *** Whitespaces
 
 I used to highlight them, but removing them is fine by me.
@@ -159,12 +161,12 @@ in emacs.
 (eval-when-compile (require 'use-package))
 #+END_SRC
 
-** Plugins
+* Plugins
 
 Plugins are the bread and butter of an emacs workflow, there's a few nice things
 in there!
 
-*** Cleaner modeline
+** Cleaner modeline
 
 I have a lot of minor modes running most of the time, which makes the modeline
 slightly overloaded. =diminish= is well-integrated with =use-package=.
@@ -173,7 +175,7 @@ slightly overloaded. =diminish= is well-integrated with =use-package=.
 (use-package diminish)
 #+END_SRC
 
-*** Theme
+** Theme
 
 Moe is a nice theme that switches between light and dark by itself, neat!
 
@@ -182,7 +184,7 @@ Moe is a nice theme that switches between light and dark by itself, neat!
   :init (require 'moe-theme-switcher))
 #+END_SRC
 
-*** Static checker
+** Static checker
 
 Use =flycheck=, it seems to be the standard in there.
 
@@ -191,7 +193,7 @@ Use =flycheck=, it seems to be the standard in there.
   :init (global-flycheck-mode))
 #+END_SRC
 
-*** Auto-complete
+** Auto-complete
 
 =company-mode= works well enough for me, and there's plenty of 3rd-party
 packages enhancing it if need be.
