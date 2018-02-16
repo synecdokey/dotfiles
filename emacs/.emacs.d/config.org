@@ -350,8 +350,10 @@ is better than handling all of that by hand!
        :base-extension "org"
        :publishing-directory "~/org/public/"
        :recursive t
-       :publishing-function org-twbs-publish-to-html)
-    )
+       :publishing-function org-twbs-publish-to-html
+       :html-postamble "<p>Copyright © 2018 - %a - Licensed under
+  <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY SA 4.0</a> -
+  Powered by <a href=\"https://www.gnu.org/software/emacs/\">Emacs</a></p>"))
 )
 #+END_SRC
 
@@ -381,6 +383,12 @@ looks great by default!
 
 #+BEGIN_SRC emacs-lisp
 (use-package ox-twbs)
+#+END_SRC
+
+I also want nice quotes on export, because that's possible.
+
+#+BEGIN_SRC emacs-lisp
+(setq org-export-with-smart-quotes t)
 #+END_SRC
 
 ** Spell checking
