@@ -130,6 +130,14 @@ It quickly gets cumbersome to type 'yes' each time.
 (fset 'yes-or-no-p 'y-or-n-p)
 #+END_SRC
 
+** Pretty symbols
+
+It's pretty, what can I say?
+
+#+BEGIN_SRC emacs-lisp
+(global-prettify-symbols-mode t)
+#+END_SRC
+
 * Package management
 
 As a vim user, I am used to have a package manager taking care of things for me.
