@@ -365,12 +365,22 @@ is better than handling all of that by hand!
 )
 #+END_SRC
 
-** Syntax highlighting in code blocks
+** Code blocks
+
+*** Syntax highlighting
 
 It's kinda useful to avoid silly typos in code examples.
 
 #+BEGIN_SRC emacs-lisp
 (setq org-src-fontify-natively t)
+#+END_SRC
+
+*** "Native" tabs
+
+It uses the major mode settings to infer tabs, smart!
+
+#+BEGIN_SRC emacs-lisp
+(setq org-src-tab-acts-natively t)
 #+END_SRC
 
 And that's about it really.
