@@ -204,16 +204,17 @@ packages enhancing it if need be.
   :diminish)
 #+END_SRC
 
-*** Minibuffer completion
+** Minibuffer completion
 
 Makes completing command a slightly better experience.
 
 #+BEGIN_SRC emacs-lisp
-(use-package ivy
+(use-package counsel
   :config
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) ")
   :init (ivy-mode t)
+  :bind (("M-x" . counsel-M-x))
   :diminish
 )
 #+END_SRC
