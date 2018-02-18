@@ -266,6 +266,18 @@ back in it at some point too.
 (use-package haskell-mode)
 #+END_SRC
 
+** Project-scoped helpers
+
+Making tooling aware of project structures is usually a good idea, simply
+because it makes it that much more easy to find whatever I'm looking for.
+
+#+BEGIN_SRC emacs-lisp
+(use-package projectile)
+(use-package counsel-projectile
+  :after (counsel projectile)
+)
+#+END_SRC
+
 * Vim experience
 
 Disclaimer: I am a vim user at heart. I will try to emulate all the good parts.
