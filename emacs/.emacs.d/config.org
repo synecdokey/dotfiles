@@ -417,4 +417,11 @@ I may not realise it.
 (add-hook 'org-mode-hook 'flyspell-mode)
 #+END_SRC
 
+** Fancy stuff
+
+#+BEGIN_SRC emacs-lisp
+(use-package org-bullets
+  :config (add-hook 'org-mode-hook 'org-bullets-mode))
+#+END_SRC
+
 And that's about it really.
