@@ -291,7 +291,22 @@ experience, which is the main thing I cannot edit without.
 #+BEGIN_SRC emacs-lisp
 (use-package evil
   :init (evil-mode 1)
-  :config (diminish 'undo-tree-mode)
+  :config
+    (diminish 'undo-tree-mode)
+#+END_SRC
+
+*** Do not bind =RET= and =SPC=
+
+As they are redundant with =j= and =l= respectively, do not let evil take precedence there.
+
+#+BEGIN_SRC emacs-lisp
+(defun my-move-key (keymap-from keymap-to key)
+  "Moves key binding from one keymap to another, deleting from the old location."
+  (define-key keymap-to key (lookup-key keymap-from key))
+  (define-key keymap-from key nil))
+
+(my-move-key evil-motion-state-map evil-normal-state-map (kbd "RET"))
+(my-move-key evil-motion-state-map evil-normal-state-map " ")
 #+END_SRC
 
 *** Load leader beforehand
@@ -331,20 +346,6 @@ POSIX compliance is expected from some tools, let's keep them happy.
 
 #+BEGIN_SRC emacs-lisp
 (setq require-final-newline 1)
-#+END_SRC
-
-*** Do not bind =RET= and =SPC=
-
-As they are redundant with =j= and =l= respectively, do not let evil take precedence there.
-
-#+BEGIN_SRC emacs-lisp
-(defun my-move-key (keymap-from keymap-to key)
-  "Moves key binding from one keymap to another, deleting from the old location."
-  (define-key keymap-to key (lookup-key keymap-from key))
-  (define-key keymap-from key nil))
-
-(my-move-key evil-motion-state-map evil-normal-state-map (kbd "RET"))
-(my-move-key evil-motion-state-map evil-normal-state-map " ")
 #+END_SRC
 
 *** Use modes when committing
