@@ -291,7 +291,13 @@ experience, which is the main thing I cannot edit without.
 #+BEGIN_SRC emacs-lisp
 (use-package evil
   :init (evil-mode 1)
-  :config (diminish 'undo-tree-mode))
+  :config (diminish 'undo-tree-mode)
+#+END_SRC
+
+*** Load leader beforehand
+
+#+BEGIN_SRC emacs-lisp
+  :after evil-leader)
 #+END_SRC
 
 ** Install =evil-surround=
@@ -347,6 +353,21 @@ It's seriously super annoying to not be able to.
 
 #+BEGIN_SRC emacs-lisp
 (add-hook 'with-editor-mode-hook 'evil-insert-state)
+#+END_SRC
+
+*** Leader key
+
+It's pretty nifty to avoid RSI-inducing movements, which are one of the reasons
+I do use vim-style commands to begin with. And yes, I know, I'm using a weird
+leader key.
+
+#+BEGIN_SRC emacs-lisp
+(use-package evil-leader
+  :config
+    (global-evil-leader-mode)
+    (evil-leader/set-leader "<muhenkan>")
+    (evil-leader/set-key "p" 'counsel-projectile-find-file)
+    (evil-leader/set-key "r" 'counsel-projectile-rg))
 #+END_SRC
 
 * Org mode tweaks
