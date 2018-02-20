@@ -295,6 +295,18 @@ experience, which is the main thing I cannot edit without.
     (diminish 'undo-tree-mode)
 #+END_SRC
 
+*** Remap arrow keys
+
+Since I don't use arrows for movement, I usually have them moving between
+splits.
+
+#+BEGIN_SRC emacs-lisp
+    (evil-global-set-key 'motion (kbd "<up>") 'windmove-up)
+    (evil-global-set-key 'motion (kbd "<down>") 'windmove-down)
+    (evil-global-set-key 'motion (kbd "<left>") 'windmove-left)
+    (evil-global-set-key 'motion (kbd "<right>") 'windmove-right)
+#+END_SRC
+
 *** Do not bind =RET= and =SPC=
 
 As they are redundant with =j= and =l= respectively, do not let evil take precedence there.
