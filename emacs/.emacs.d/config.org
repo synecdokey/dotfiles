@@ -341,7 +341,7 @@ As they are redundant with =j= and =l= respectively, do not let evil take preced
 (my-move-key evil-motion-state-map evil-normal-state-map " ")
 #+END_SRC
 
-*** Use modes when commiting
+*** Use modes when committing
 
 It's seriously super annoying to not be able to.
 
