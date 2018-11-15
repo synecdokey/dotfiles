@@ -2,7 +2,7 @@
 	name = Kelsey Zapata
 	email = key@kelseyz.org
 [core]
-	editor = emacsclient
+	editor = nvim
 	excludesfile = ~/.config/git/ignore_global
 	pager = less -RSFX
 [init]
