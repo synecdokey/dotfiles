@@ -1,6 +1,6 @@
 [user]
 	name = Kelsey Zapata
-	email = kelseyz@wetafx.co.nz
+	email = key@kelseyz.org
 [core]
 	editor = emacsclient
 	excludesfile = ~/.config/git/ignore_global
