@@ -166,7 +166,22 @@ in emacs.
 Plugins are the bread and butter of an emacs workflow, there's a few nice things
 in there!
 
-** Cleaner modeline
+** Modeline
+
+The default modeline is underwhelming at best, let's improve on that.
+
+*** Pretty modeline
+
+The default one is pretty basic, with no icons whatsoever to keep it simple, this
+fixes it. And it's wicked fast to boot!
+
+#+BEGIN_SRC emacs-lisp
+(use-package doom-modeline :ensure t :defer t
+                           :init (doom-modeline-init))
+
+#+END_SRC
+
+*** Cleaner modeline
 
 I have a lot of minor modes running most of the time, which makes the modeline
 slightly overloaded. =diminish= is well-integrated with =use-package=.
