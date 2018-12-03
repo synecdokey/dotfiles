@@ -1,6 +1,6 @@
 #+TITLE: Emacs configuration
 #+AUTHOR: Kelsey Zapata
-#+EMAIL: kelseyz@wetafx.co.nz
+#+EMAIL: key@kelseyz.org
 
 * Basic configuration
 
