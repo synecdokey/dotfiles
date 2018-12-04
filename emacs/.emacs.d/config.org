@@ -283,6 +283,17 @@ back in it at some point too.
 (use-package haskell-mode)
 #+END_SRC
 
+*** Ruby
+
+I do some Ruby these days. I don't particularly like it, but I might as well
+make my time in Ruby-land a little better.
+
+Adding =end= automatically is nice for example.
+
+#+BEGIN_SRC emacs-lisp
+(use-package ruby-end)
+#+END_SRC
+
 *** Typescript
 
 Types are neat. Typescript is a pragmatic solution to bring types to Javascript,
