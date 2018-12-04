@@ -32,7 +32,7 @@ keyboard-driven workflows, remove every visible bar, keeping only the mode-line.
 I am partial to Adobe Source Code Pro for some reason.
 
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'default-frame-alist '(font . "Source Code Pro-10"))
+(add-to-list 'default-frame-alist '(font . "Source Code Pro-12"))
 #+END_SRC
 
 ** Sane defaults
