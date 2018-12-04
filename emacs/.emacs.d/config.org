@@ -283,6 +283,17 @@ back in it at some point too.
 (use-package haskell-mode)
 #+END_SRC
 
+*** Typescript
+
+Types are neat. Typescript is a pragmatic solution to bring types to Javascript,
+and not only in the backend, so let's bring that sweet syntax highlight to tsx
+files too.
+
+#+BEGIN_SRC emacs-lisp
+(use-package typescript-mode
+  :mode "\\.tsx\\'")
+#+END_SRC
+
 ** Project-scoped helpers
 
 Making tooling aware of project structures is usually a good idea, simply
