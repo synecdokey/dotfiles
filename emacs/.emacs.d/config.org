@@ -180,7 +180,7 @@ fixes it. And it's wicked fast to boot!
   :ensure t
   :defer t
   :init (doom-modeline-init)
-  :config (setq doom-modeline-buffer-file-name-style 'truncate-with-project))
+  :custom (doom-modeline-buffer-file-name-style 'truncate-with-project))
 #+END_SRC
 
 *** Cleaner modeline
