@@ -303,6 +303,12 @@ files too.
 #+BEGIN_SRC emacs-lisp
 (use-package typescript-mode
   :mode "\\.tsx\\'")
+#+END_SRC
+
+=tide= is using the same LSP as VSCode, and let's be honest, it has superb
+completion when it comes to typescript! So let's use it!
+
+#+BEGIN_SRC emacs-lisp
 (use-package tide
   :hook (typescript-mode . tide-setup))
 #+END_SRC
