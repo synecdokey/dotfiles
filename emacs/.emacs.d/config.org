@@ -159,6 +159,9 @@ in emacs.
 (setq use-package-always-ensure t)
 
 (eval-when-compile (require 'use-package))
+
+;; Plugin to check if a binary exists
+(use-package use-package-ensure-system-package)
 #+END_SRC
 
 * Plugins
