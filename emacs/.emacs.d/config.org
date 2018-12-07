@@ -303,6 +303,8 @@ files too.
 #+BEGIN_SRC emacs-lisp
 (use-package typescript-mode
   :mode "\\.tsx\\'")
+(use-package tide
+  :hook (typescript-mode . tide-setup))
 #+END_SRC
 
 ** Project-scoped helpers
