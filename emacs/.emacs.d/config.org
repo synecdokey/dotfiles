@@ -32,7 +32,7 @@ keyboard-driven workflows, remove every visible bar, keeping only the mode-line.
 I am partial to Adobe Source Code Pro for some reason.
 
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'default-frame-alist '(font . "Source Code Pro-12"))
+(add-to-list 'default-frame-alist '(font . "Hasklig-12"))
 #+END_SRC
 
 ** Sane defaults
@@ -193,6 +193,15 @@ slightly overloaded. =diminish= is well-integrated with =use-package=.
 
 #+BEGIN_SRC emacs-lisp
 (use-package diminish)
+#+END_SRC
+
+** Ligatures
+
+Add ligatures using Hasklig, which is basically Source Code Pro with ligatures.
+
+#+BEGIN_SRC emacs-lisp
+(use-package hasklig-mode
+  :hook prog-mode)
 #+END_SRC
 
 ** Theme
