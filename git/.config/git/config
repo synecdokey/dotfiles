@@ -1,6 +1,7 @@
 [user]
 	name = Kelsey Zapata
 	email = key@kelseyz.org
+	signingkey = "F5D217AA1A6709F8DE0887337BC462C8E182B636"
 [core]
 	editor = nvim
 	excludesfile = ~/.config/git/ignore_global
@@ -9,3 +10,5 @@
 	templatedir = ~/.config/git/template
 [fetch]
 	prune = true
+[gpg]
+	program = gpg2
