@@ -6,6 +6,8 @@
 	editor = nvim
 	excludesfile = ~/.config/git/ignore_global
 	pager = less -RSFX
+[commit]
+	gpgsign	= true
 [init]
 	templatedir = ~/.config/git/template
 [fetch]
