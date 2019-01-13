@@ -52,5 +52,6 @@ __pycache__/
 ###########
 .cargo/
 node_modules/
+vendor/bundle/
 *.egg*
 .tox
