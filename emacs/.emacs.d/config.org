@@ -29,10 +29,11 @@ keyboard-driven workflows, remove every visible bar, keeping only the mode-line.
 
 ** Set default font
 
-I am partial to Adobe Source Code Pro for some reason.
+I am partial to Menlo since switching to macOS. The only reason I'm being
+explicit is that I want a bigger font!
 
 #+BEGIN_SRC emacs-lisp
-(add-to-list 'default-frame-alist '(font . "Hasklig-12"))
+(add-to-list 'default-frame-alist '(font . "Menlo-14"))
 #+END_SRC
 
 ** Sane defaults
@@ -193,15 +194,6 @@ slightly overloaded. =diminish= is well-integrated with =use-package=.
 
 #+BEGIN_SRC emacs-lisp
 (use-package diminish)
-#+END_SRC
-
-** Ligatures
-
-Add ligatures using Hasklig, which is basically Source Code Pro with ligatures.
-
-#+BEGIN_SRC emacs-lisp
-(use-package hasklig-mode
-  :hook prog-mode)
 #+END_SRC
 
 ** Theme
