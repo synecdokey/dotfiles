@@ -295,7 +295,8 @@ make my time in Ruby-land a little better.
 Adding =end= automatically is nice for example.
 
 #+BEGIN_SRC emacs-lisp
-(use-package ruby-end)
+(use-package ruby-end
+  :init (setq ruby-indent-level 2))
 #+END_SRC
 
 *** Typescript
@@ -326,6 +327,22 @@ because it makes it that much more easy to find whatever I'm looking for.
 (use-package projectile)
 (use-package counsel-projectile
   :after (counsel projectile)
+)
+#+END_SRC
+
+** Filer sidebar
+
+It's lazy, but I've been spoiled by VSCode there. And hey, don't judge too hard,
+=nerdtree= is basically the same thing anyway!
+
+TODO: I need to get some nice keyboard shortcut to toggle this!
+
+#+BEGIN_SRC emacs-lisp
+(use-package dired-sidebar
+  :ensure t
+  :commands (dired-sidebar-toggle-sidebar)
+  :init (when (string= system-type "darwin")
+          (setq dired-use-ls-dired nil))
 )
 #+END_SRC
 
