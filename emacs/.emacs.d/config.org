@@ -454,7 +454,7 @@ leader key.
 (use-package evil-leader
   :config
     (global-evil-leader-mode)
-    (evil-leader/set-leader "<muhenkan>")
+    (evil-leader/set-leader "<SPC>")
     (evil-leader/set-key "p" 'counsel-projectile-find-file)
     (evil-leader/set-key "r" 'counsel-projectile-rg))
 #+END_SRC
