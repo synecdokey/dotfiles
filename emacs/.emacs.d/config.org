@@ -182,8 +182,7 @@ fixes it. And it's wicked fast to boot!
 #+BEGIN_SRC emacs-lisp
 (use-package doom-modeline
   :ensure t
-  :defer t
-  :init (doom-modeline-init)
+  :hook (after-init . doom-modeline-mode)
   :custom (doom-modeline-buffer-file-name-style 'truncate-with-project))
 #+END_SRC
 
@@ -202,7 +201,8 @@ Moe is a nice theme that switches between light and dark by itself, neat!
 
 #+BEGIN_SRC emacs-lisp
 (use-package moe-theme
-  :init (require 'moe-theme-switcher))
+  :init (require 'moe-theme-switcher)
+  :config (moe-light) (moe-theme-set-color 'purple))
 #+END_SRC
 
 ** Static checker
