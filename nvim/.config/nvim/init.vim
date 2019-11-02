@@ -39,3 +39,6 @@ noremap <Right> :wincmd l<CR>
 autocmd BufWinEnter * let w:m3=matchadd('Space', '\s\+$\| \+\ze\t', -1)
 highlight Space ctermbg=darkblue
 set list listchars=tab:»·,trail:·
+
+" Source Plugins
+source $XDG_CONFIG_HOME/nvim/plugins.vim
