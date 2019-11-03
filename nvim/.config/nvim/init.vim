@@ -42,3 +42,6 @@ set list listchars=tab:»·,trail:·
 
 " Source Plugins
 source $XDG_CONFIG_HOME/nvim/plugins.vim
+
+" Configure completion engine
+source $XDG_CONFIG_HOME/nvim/coc.vim
