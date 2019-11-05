@@ -13,8 +13,11 @@ Plug 'junegunn/fzf.vim'
 " VSCode Completion engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Git plugin
+" Git plugins
+" " Git commands
 Plug 'tpope/vim-fugitive'
+" " Git diff in gutter
+Plug 'airblade/vim-gitgutter'
 
 " Create closing characters, à la VSCode, it's pretty useful
 Plug 'jiangmiao/auto-pairs'
