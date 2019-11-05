@@ -16,6 +16,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Git plugin
 Plug 'tpope/vim-fugitive'
 
+" Create closing characters, à la VSCode, it's pretty useful
+Plug 'jiangmiao/auto-pairs'
+
 " Theme
 Plug 'haishanh/night-owl.vim'
 
