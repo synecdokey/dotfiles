@@ -5,3 +5,4 @@ if not set -q fish_initial
 end
 set -xg XDG_CONFIG_HOME ~/.config
 set -xg VISUAL nvim
+set -xg FZF_DEFAULT_COMMAND 'rg --files --no-ignore-vcs --hidden'

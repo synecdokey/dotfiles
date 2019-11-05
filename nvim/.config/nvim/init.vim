@@ -56,3 +56,6 @@ source $XDG_CONFIG_HOME/nvim/coc.vim
 colorscheme night-owl
 
 source $XDG_CONFIG_HOME/nvim/lightline.vim
+
+" fuzzy search config
+source $XDG_CONFIG_HOME/nvim/fzf.vim
