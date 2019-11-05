@@ -16,6 +16,11 @@ set incsearch
 " " Highlight search matches
 set hlsearch
 
+" True colours
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 " Tab settings
 " " Convert tabs to spaces (use ^V<Tab> to avoid the conversion)
 set expandtab
@@ -45,3 +50,7 @@ source $XDG_CONFIG_HOME/nvim/plugins.vim
 
 " Configure completion engine
 source $XDG_CONFIG_HOME/nvim/coc.vim
+
+" Set theme
+" " Careful, this one needs a true colors enabled terminal!
+colorscheme night-owl
