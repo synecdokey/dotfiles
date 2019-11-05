@@ -13,6 +13,9 @@ Plug 'junegunn/fzf.vim'
 " VSCode Completion engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Git plugin
+Plug 'tpope/vim-fugitive'
+
 " Theme
 Plug 'haishanh/night-owl.vim'
 
