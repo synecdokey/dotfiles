@@ -16,4 +16,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Theme
 Plug 'haishanh/night-owl.vim'
 
+" Status line
+Plug 'itchyny/lightline.vim'
+
 call plug#end()
