@@ -1,6 +1,0 @@
-* Dotfiles
-
-These dotfiles are meant to be used in coordination with GNU =stow=.
-
-They mostly deal with my window manager (=xmonad=) and my editor (=emacs=)
-configuration.
