@@ -22,6 +22,9 @@ Plug 'airblade/vim-gitgutter'
 " Create closing characters, à la VSCode, it's pretty useful
 Plug 'jiangmiao/auto-pairs'
 
+" Instant markdown preview in the browser
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 " Theme
 Plug 'haishanh/night-owl.vim'
 
