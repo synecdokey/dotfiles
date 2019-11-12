@@ -10,3 +10,7 @@ brew install \
   ripgrep \
   stow \
   yarn
+
+brew cask install \
+  kitty \
+  vimr
