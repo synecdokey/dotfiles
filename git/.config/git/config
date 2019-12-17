@@ -1,6 +1,6 @@
 [user]
-	name = Kelsey Zapata
-	email = key@kelseyz.org
+	name = Emilia Zapata
+	email = emilia@springload.co.nz
 [core]
 	editor = nvim
 	excludesfile = ~/.config/git/ignore_global
