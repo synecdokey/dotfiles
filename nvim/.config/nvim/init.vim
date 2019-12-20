@@ -9,6 +9,8 @@ syntax on
 set showmatch
 " " Mode is already shown in the statusbar, hide it
 set noshowmode
+" " Enable mouse handling, for pairing situations
+set mouse=a
 
 " Search Settings
 " " Move cursor while searching
