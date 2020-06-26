@@ -23,6 +23,9 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
+" Remove netrw's top banner
+let g:netrw_banner = 0
+
 " Tab settings
 " " Convert tabs to spaces (use ^V<Tab> to avoid the conversion)
 set expandtab
