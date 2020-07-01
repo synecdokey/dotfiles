@@ -1,11 +1,11 @@
 {
-  "javascript.validate.enable": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "javascriptreact",
     "json",
     "css",
     "html",
+    "markdown",
     "typescript",
     "typescriptreact"
   ]
