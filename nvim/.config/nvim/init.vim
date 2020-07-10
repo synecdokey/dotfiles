@@ -64,3 +64,7 @@ source $XDG_CONFIG_HOME/nvim/lightline.vim
 
 " fuzzy search config
 source $XDG_CONFIG_HOME/nvim/fzf.vim
+
+" set mdx type properly
+au BufRead,BufNewFile *.mdx set filetype=mdx
+au BufRead,BufNewFile *.mdx set syntax=markdown.mdx
