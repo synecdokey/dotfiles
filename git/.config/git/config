@@ -6,6 +6,7 @@
 	excludesfile = ~/.config/git/ignore_global
 [init]
 	templatedir = ~/.config/git/template
+	defaultBranch = dev
 [fetch]
 	prune = true
 [gpg]
