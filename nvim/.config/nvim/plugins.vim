@@ -13,6 +13,9 @@ Plug 'junegunn/fzf.vim'
 " VSCode Completion engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Surround
+Plug 'tpope/vim-surround'
+
 " Git plugins
 " " Git commands
 Plug 'tpope/vim-fugitive'
