@@ -62,7 +62,7 @@ source $XDG_CONFIG_HOME/nvim/coc.vim
 
 " Set theme
 " " Careful, this one needs a true colors enabled terminal!
-colorscheme night-owl
+colorscheme spring-night
 
 source $XDG_CONFIG_HOME/nvim/lightline.vim
 
