@@ -1,8 +1,12 @@
 " Global settings
 " " Keep things improved (noop in neovim)
 set nocompatible
+" " Don't wrap lines, let the long lines stand out in their horribleness
+set nowrap
 " " Display line numbers
 set number
+" " Relative numbers
+set relativenumber
 " " Syntax highlighting (on by default in neovim)
 syntax on
 " " Show matching brackets
