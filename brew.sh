@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 brew install \
+  fd \
   fish \
   fzf \
   git \
