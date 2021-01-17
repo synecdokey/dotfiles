@@ -15,6 +15,8 @@ set showmatch
 set noshowmode
 " " Enable mouse handling, for pairing situations
 set mouse=a
+" " Highlight the 80th character, to know if I need to start refactoring
+set colorcolumn=80
 
 " Search Settings
 " " Move cursor while searching
