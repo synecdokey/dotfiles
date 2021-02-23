@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/emilia/dotfiles/nvim/.config/nvim'
+let g:netrw_dirhist_3='/Users/emilia/dotfiles/nvim/.config/nvim/ftplugin'
+let g:netrw_dirhist_2='/Users/emilia/dotfiles/nvim/.config/nvim'
+let g:netrw_dirhist_1='/Users/emilia/perso/itsy-bitsy-router/packages/docs/docs/guides'
+let g:netrw_dirhist_0='/Users/emilia/perso/itsy-bitsy-router/packages/docs/docs'
+let g:netrw_dirhist_9='/Users/emilia/perso/itsy-bitsy-router/packages/docs/docs/api'
+let g:netrw_dirhist_8='/Users/emilia/perso/itsy-bitsy-router/packages/docs/docs'
+let g:netrw_dirhist_7='/Users/emilia/perso/genshin/src/utils'
+let g:netrw_dirhist_6='/Users/emilia/perso/genshin/pages/items'
+let g:netrw_dirhist_5='/Users/emilia/perso/genshin/pages'

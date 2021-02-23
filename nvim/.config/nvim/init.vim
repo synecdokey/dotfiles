@@ -41,8 +41,6 @@ set tabstop=2
 set softtabstop=2
 " " Reindent operations are 2 spaces-long
 set shiftwidth=2
-" " Do not replace tabs in Makefiles
-autocmd FileType make setlocal noexpandtab
 
 " Keybindings
 " " Remap arrow keys to split navigation
@@ -59,17 +57,9 @@ set list listchars=tab:»·,trail:·
 " Source Plugins
 source $XDG_CONFIG_HOME/nvim/plugins.vim
 
-" Configure completion engine
-source $XDG_CONFIG_HOME/nvim/coc.vim
-
 " Set theme
 " " Careful, this one needs a true colors enabled terminal!
 colorscheme spring-night
-
-source $XDG_CONFIG_HOME/nvim/lightline.vim
-
-" fuzzy search config
-source $XDG_CONFIG_HOME/nvim/fzf.vim
 
 " Rust
 " " Format on save
