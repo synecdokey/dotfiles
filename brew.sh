@@ -12,6 +12,6 @@ brew install \
   stow \
   yarn
 
-brew cask install \
+brew install --cask \
   kitty \
   vimr
