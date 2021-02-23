@@ -10,16 +10,14 @@ will install the associated config using symlinks for ease of update.
 
 ## Available configuration
 
-I don't use *that* much software to begin with, so the list is pretty short:
+I don't use _that_ much software to begin with, so the list is pretty short:
 
 - `neovim` which is my primary text editor
-- `emacs` which used to be my primary text editor, left as code completion was
-  underwhelming and `jsx`/`tsx` support was fiddly, so here be dragons
 - `kitty` my terminal of choice as I find `iTerm2` and `hyper` slightly too
   laggy for terminal use
 - `git` because that's pretty much required these days. I prefer `hg`, but
   such is the world we live in
-- `fish` as my shell. It's smart and spares me a lot of typing (relatively 
+- `fish` as my shell. It's smart and spares me a lot of typing (relatively
   speaking)
 
 There's also a small `brew` script that installs the stuff I like to use
