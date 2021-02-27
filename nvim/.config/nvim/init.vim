@@ -1,6 +1,11 @@
 " Remove netrw's top banner
 let g:netrw_banner = 0
 
+" True colours
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 " Highlight trailing whitespaces
 autocmd BufWinEnter * let w:m3=matchadd('Space', '\s\+$\| \+\ze\t', -1)
 highlight Space ctermbg=darkblue

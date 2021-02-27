@@ -24,11 +24,6 @@ set incsearch
 " " Highlight search matches
 set hlsearch
 
-" True colours
-if (has("termguicolors"))
- set termguicolors
-endif
-
 " Tab settings
 " " Convert tabs to spaces (use ^V<Tab> to avoid the conversion)
 set expandtab
