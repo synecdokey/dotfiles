@@ -9,5 +9,6 @@
     "mdx",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+  "emmet.includeLanguages": { "htmldjango": "html" }
 }
