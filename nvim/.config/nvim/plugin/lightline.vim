@@ -1,4 +1,5 @@
 let g:lightline = {
+      \  'colorscheme': 'spring_night',
       \  'active': {
       \    'left': [
       \      [ 'mode', 'paste' ],
