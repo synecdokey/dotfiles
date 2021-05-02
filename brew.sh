@@ -3,14 +3,19 @@
 brew install \
   fd \
   fish \
+  fnm \
   fzf \
   git \
   jq \
-  neovim \
+  luarocks \
   pgcli \
+  pnpm \
   ripgrep \
   stow \
   yarn
+
+# 0.5 still doesn't have an official release
+brew install neovim --HEAD
 
 brew install --cask \
   kitty \
