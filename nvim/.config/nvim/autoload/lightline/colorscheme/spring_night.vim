@@ -9,7 +9,7 @@ let s:skyblue = ['#a8d2eb', 153]
 let s:palesakura = ['#e996aa', 175]
 let s:weakfg = ['#8d9eb2', 103]
 let s:whiteblue = ['#d8e2f0', 195]
-let s:whitepink = ['#ebeadb', 224]
+let s:whitepink = ['#ebdfdb', 224]
 let s:whitered = ['#ffbfaf', 217]
 
 let s:error = [ [ s:bg, s:red ] ]
