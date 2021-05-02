@@ -6,6 +6,7 @@ brew install \
   fnm \
   fzf \
   git \
+  git-lfs \
   jq \
   luarocks \
   pgcli \
