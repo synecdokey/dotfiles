@@ -28,7 +28,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 " Theme
 Plug 'haishanh/night-owl.vim'
 Plug 'rhysd/vim-color-spring-night'
-Plug 'lifepillar/vim-colortemplate'
 
 " Status line
 Plug 'itchyny/lightline.vim'
