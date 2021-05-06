@@ -8,9 +8,8 @@ endif
 
 set list listchars=tab:»·,trail:·
 
-
 " Source Plugins
-source $XDG_CONFIG_HOME/nvim/plugins.vim
+lua require('plugins')
 
 " Set theme
 colorscheme spring-night
