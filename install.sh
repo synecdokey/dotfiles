@@ -21,3 +21,7 @@ brew install neovim --HEAD
 brew install --cask \
   kitty \
   vimr
+
+# Install a package manager for neovim
+git clone https://github.com/savq/paq-nvim.git \
+  "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/opt/paq-nvim
