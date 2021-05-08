@@ -33,3 +33,6 @@ set tabstop=2
 set softtabstop=2
 " " Reindent operations are 2 spaces-long
 set shiftwidth=2
+
+" Completion
+set completeopt=menuone,noselect

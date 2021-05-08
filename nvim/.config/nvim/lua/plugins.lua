@@ -18,3 +18,7 @@ paq 'itchyny/lightline.vim'
 
 -- Telescope (fuzzy finder and more)
 paq 'nvim-telescope/telescope.nvim'
+
+-- Code completion
+paq 'neovim/nvim-lspconfig'
+paq 'hrsh7th/nvim-compe'
