@@ -24,8 +24,15 @@ require'compe'.setup {
   };
 }
 
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local opts = { noremap=true, silent=true }
+  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'Gd', '<cmd>vsplit<CR><cmd>lua vim.lsp.buf.definition()<CR>', opts)
+end
+
 -- JS, TS & React
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.tsserver.setup{ on_attach=on_attach }
 EOF
 
 " Completion mappings
