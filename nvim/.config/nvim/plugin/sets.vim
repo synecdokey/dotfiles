@@ -17,6 +17,8 @@ set noshowmode
 set mouse=a
 " " Highlight the 80th character, to know if I need to start refactoring
 set colorcolumn=80
+" " Open vertical splits to the right
+set splitright
 
 " Search Settings
 " " Move cursor while searching
