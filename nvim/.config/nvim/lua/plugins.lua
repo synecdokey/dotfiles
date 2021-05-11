@@ -22,3 +22,6 @@ paq 'nvim-telescope/telescope.nvim'
 -- Code completion
 paq 'neovim/nvim-lspconfig'
 paq 'hrsh7th/nvim-compe'
+
+-- Better syntax highlighting
+paq 'nvim-treesitter/nvim-treesitter'
