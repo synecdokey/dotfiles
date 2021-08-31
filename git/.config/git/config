@@ -1,6 +1,8 @@
 [user]
 	name = Emilia Zapata
-	email = emilia@springload.co.nz
+	email = zapata.contact@gmail.com
+[includeIf "gitdir:~/work/"]
+	path = work_config
 [core]
 	editor = nvim
 	excludesfile = ~/.config/git/ignore_global
@@ -10,7 +12,7 @@
 [fetch]
 	prune = true
 [gpg]
-	program = gpg2
+	program = gpg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
