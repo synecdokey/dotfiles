@@ -1,27 +1,27 @@
 -- Plugin manager boilerplate
-vim.cmd 'packadd paq-nvim'
-local paq = require'paq-nvim'.paq
-paq 'savq/paq-nvim'
+return require('packer').startup(function(use)
+  use 'wbthomason/packer.nvim'
 
--- Dependencies
-paq 'nvim-lua/popup.nvim'
-paq 'nvim-lua/plenary.nvim'
+  -- Prelude, aka dependencies
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
 
--- Theme
-paq 'rhysd/vim-color-spring-night'
+  -- Theme
+  use 'rhysd/vim-color-spring-night'
 
--- Surround
-paq 'tpope/vim-surround'
+  -- Surround
+  use 'tpope/vim-surround'
 
--- Status line
-paq 'itchyny/lightline.vim'
+  -- Status line
+  use 'itchyny/lightline.vim'
 
--- Telescope (fuzzy finder and more)
-paq 'nvim-telescope/telescope.nvim'
+  -- Telescope (fuzzy finder and more)
+  use 'nvim-telescope/telescope.nvim'
 
--- Code completion
-paq 'neovim/nvim-lspconfig'
-paq 'hrsh7th/nvim-compe'
+  -- Code completion
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/nvim-compe'
 
--- Better syntax highlighting
-paq 'nvim-treesitter/nvim-treesitter'
+  -- Better syntax highlighting
+  use 'nvim-treesitter/nvim-treesitter'
+end)
