@@ -23,5 +23,5 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-compe'
 
   -- Better syntax highlighting
-  use 'nvim-treesitter/nvim-treesitter'
+  use 'sheerun/vim-polyglot'
 end)
