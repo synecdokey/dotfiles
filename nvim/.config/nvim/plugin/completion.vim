@@ -35,6 +35,7 @@ end
 
 -- JS, TS & React
 require'lspconfig'.tsserver.setup{ on_attach=on_attach }
+require'lspconfig'.tailwindcss.setup{ on_attach=on_attach }
 EOF
 
 " Completion mappings
