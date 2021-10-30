@@ -12,4 +12,4 @@ vim.opt.listchars = { tab = '»·', trail = '·' }
 require('plugins')
 
 -- Set theme
-vim.cmd 'colorscheme spring-night'
+vim.cmd 'colorscheme nordfox'
