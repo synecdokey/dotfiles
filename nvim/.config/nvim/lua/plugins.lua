@@ -14,7 +14,10 @@ return require('packer').startup(function(use)
   use 'tpope/vim-surround'
 
   -- Status line
-  use 'itchyny/lightline.vim'
+  use  { 'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
+
 
   -- Telescope (fuzzy finder and more)
   use 'nvim-telescope/telescope.nvim'
