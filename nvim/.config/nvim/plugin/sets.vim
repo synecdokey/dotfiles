@@ -19,6 +19,8 @@ set mouse=a
 set colorcolumn=80
 " " Open vertical splits to the right
 set splitright
+" " GUI font
+set guifont=Comic\ Code:h17
 
 " Search Settings
 " " Move cursor while searching
