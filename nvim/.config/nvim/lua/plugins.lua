@@ -21,6 +21,15 @@ return require('packer').startup(function(use)
   -- Snippets
   use 'l3mon4d3/luasnip'
 
+  -- Code completion
+  use { 'hrsh7th/nvim-cmp', requires = {
+    'neovim/nvim-lspconfig',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline'
+  } }
+
   -- Telescope (fuzzy finder and more)
   use 'nvim-telescope/telescope.nvim'
 
