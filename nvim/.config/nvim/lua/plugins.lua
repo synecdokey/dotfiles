@@ -18,6 +18,9 @@ return require('packer').startup(function(use)
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
+  -- Snippets
+  use 'l3mon4d3/luasnip'
+
   -- Telescope (fuzzy finder and more)
   use 'nvim-telescope/telescope.nvim'
 
