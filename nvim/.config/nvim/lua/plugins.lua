@@ -18,13 +18,8 @@ return require('packer').startup(function(use)
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
-
   -- Telescope (fuzzy finder and more)
   use 'nvim-telescope/telescope.nvim'
-
-  -- Code completion
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-compe'
 
   -- Better syntax highlighting
   use 'sheerun/vim-polyglot'
