@@ -2,6 +2,10 @@ font:
   size: 17
   normal:
     family: Comic Code
+  offset:
+    y: 6
+  glyph_offset:
+    y: 4
 shell:
   program: /usr/local/bin/fish
 colors:
