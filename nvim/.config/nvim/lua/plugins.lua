@@ -33,6 +33,9 @@ return require('packer').startup(function(use)
   -- Telescope (fuzzy finder and more)
   use 'nvim-telescope/telescope.nvim'
 
+  -- Harpoon, advanced buffer navigation
+  use 'theprimeagen/harpoon'
+
   -- Better syntax highlighting
   use 'sheerun/vim-polyglot'
 end)
