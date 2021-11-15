@@ -36,6 +36,9 @@ return require('packer').startup(function(use)
   -- Harpoon, advanced buffer navigation
   use 'theprimeagen/harpoon'
 
+  -- Enhance lsp, since prettier & eslint don't play nice by default
+  use 'jose-elias-alvarez/null-ls.nvim'
+
   -- Better syntax highlighting
   use 'sheerun/vim-polyglot'
 end)
