@@ -39,6 +39,10 @@ return require('packer').startup(function(use)
   -- Enhance lsp, since prettier & eslint don't play nice by default
   use 'jose-elias-alvarez/null-ls.nvim'
 
+  -- Git integration
+  use { 'lewis6991/gitsigns.nvim', requires = {
+    'nvim-lua/plenary.nvim'
+  } }
   -- Better syntax highlighting
   use 'sheerun/vim-polyglot'
 end)
