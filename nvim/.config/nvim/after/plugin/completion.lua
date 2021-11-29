@@ -79,7 +79,7 @@ end
 -- Wire completion to the LSP
 local caps = require'cmp_nvim_lsp'.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local servers = { 'tsserver', 'tailwindcss' }
+local servers = { 'cssls', 'tsserver', 'tailwindcss' }
 
 for _, lsp in ipairs(servers) do
   lspconf[lsp].setup {
