@@ -17,7 +17,8 @@ brew install \
 brew install neovim --HEAD
 
 brew install --cask \
-  kitty
+  kitty \
+  obsidian
 
 # LSP-related tooling
 pnpm add @tailwindcss/language-server typescript \
