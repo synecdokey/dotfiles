@@ -11,19 +11,17 @@ brew install \
   pgcli \
   pnpm \
   ripgrep \
-  stow \
-  yarn
+  stow
 
 # 0.5 still doesn't have an official release
 brew install neovim --HEAD
 
 brew install --cask \
-  kitty \
-  vimr
+  kitty
 
 # LSP-related tooling
-yarn global add @tailwindcss/language-server typescript \
-  typescript-language-server
+pnpm add @tailwindcss/language-server typescript \
+  typescript-language-server --global
 
 # Install a package manager for neovim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
