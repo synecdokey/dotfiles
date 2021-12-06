@@ -43,6 +43,13 @@ return require('packer').startup(function(use)
   use { 'lewis6991/gitsigns.nvim', requires = {
     'nvim-lua/plenary.nvim'
   } }
+
+  -- Terminal icons
+  use {
+    '~/projects/nvim-nonicons',
+    requires = {'kyazdani42/nvim-web-devicons'},
+  }
+
   -- Better syntax highlighting
   use 'sheerun/vim-polyglot'
 end)
