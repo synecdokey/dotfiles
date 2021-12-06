@@ -50,6 +50,9 @@ return require('packer').startup(function(use)
     requires = {'kyazdani42/nvim-web-devicons'},
   }
 
+  -- Pretty lsp completion
+  use 'onsails/lspkind-nvim'
+
   -- Better syntax highlighting
   use 'sheerun/vim-polyglot'
 end)
