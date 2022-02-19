@@ -45,8 +45,7 @@ cmp.setup {
     expand = function(args) luasnip.lsp_expand(args.body) end
   },
   mapping = {
-    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-    ['<Tab>'] = cmp.mapping(function(fallback)
+    ['<C-Q>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }), ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
