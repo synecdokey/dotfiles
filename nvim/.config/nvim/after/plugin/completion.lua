@@ -116,6 +116,10 @@ local servers = { 'cssls', 'tsserver', 'tailwindcss' }
 for _, lsp in ipairs(servers) do
   lspconf[lsp].setup {
     on_attach = on_attach,
+    init_options = {
+      hostInfo = 'neovim',
+      npmLocation = '/opt/homebrew/bin/npm',
+    },
     capabilities = caps,
     flags = {
       debounce_text_changes = 150,
