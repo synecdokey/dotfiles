@@ -16,7 +16,9 @@ brew install \
 
 brew install --cask \
   kitty \
-  obsidian
+  numi \
+  obsidian \
+  raycast
 
 # LSP-related tooling
 pnpm add @tailwindcss/language-server typescript \
