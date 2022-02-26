@@ -17,4 +17,5 @@ vim.opt.listchars = { tab = '»·', trail = '·' }
 require('plugins')
 
 -- Set theme
-vim.cmd 'colorscheme nordfox'
+require'catppuccin'.setup()
+vim.cmd 'colorscheme catppuccin'

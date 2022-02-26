@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
   -- Theme
   use 'rhysd/vim-color-spring-night'
   use 'EdenEast/nightfox.nvim'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
 
   -- Surround
   use 'tpope/vim-surround'
