@@ -5,6 +5,7 @@ null_ls.setup({
     null_ls.builtins.formatting.prettier.with({
       prefer_local = 'node_modules/.bin',
     }),
+    require('null-ls').builtins.formatting.stylua,
   },
   on_attach = function(client)
     if client.resolved_capabilities.document_formatting then
