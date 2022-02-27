@@ -17,6 +17,8 @@ opt.colorcolumn = '80'
 opt.splitright = true
 -- -- GUI font
 opt.guifont = 'Comic Code:h17'
+-- Mouse support, useful for pairing (and resizing splits)
+opt.mouse = 'a'
 
 -- Tab settings
 -- -- Convert tabs to spaces (use ^V<Tab> to avoid the conversion)
