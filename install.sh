@@ -12,7 +12,8 @@ brew install \
   pgcli \
   pnpm \
   ripgrep \
-  stow
+  stow \
+  stylua
 
 brew install --cask \
   kitty \
