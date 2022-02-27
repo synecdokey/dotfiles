@@ -55,4 +55,10 @@ return require('packer').startup(function(use)
 
   -- Better syntax highlighting
   use 'sheerun/vim-polyglot'
+
+  -- Treesitter integration
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 end)
