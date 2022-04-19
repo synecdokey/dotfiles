@@ -5,4 +5,4 @@ vim.keymap.set({ 'n', 'v' }, '<Down>', '<cmd>wincmd j<cr>')
 vim.keymap.set({ 'n', 'v' }, '<Up>', '<cmd>wincmd k<cr>')
 vim.keymap.set({ 'n', 'v' }, '<Right>', '<cmd>wincmd l<cr>')
 --- Disable ex-mode
-vim.keymap.set({ 'n', 'v', 'o' }, 'Q', '<nop>')
+vim.keymap.set('', 'Q', '<nop>')
