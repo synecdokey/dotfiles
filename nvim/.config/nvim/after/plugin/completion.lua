@@ -119,7 +119,7 @@ local on_attach = function(client, bufnr)
   -- Global renames
   vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename, opts)
   -- Code actions
-  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_actions, opts)
+  -- vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_actions, opts)
 end
 
 -- Wire completion to the LSP
