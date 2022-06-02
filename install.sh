@@ -26,7 +26,7 @@ pnpm add \
   @tailwindcss/language-server \
   typescript \
   typescript-language-server \
-  vscode-css-languageservice --global
+  vscode-langservers-extracted --global
 
 # Install a package manager for neovim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
