@@ -60,9 +60,6 @@ return require('packer').startup(function(use)
   -- Pretty lsp completion
   use('onsails/lspkind-nvim')
 
-  -- Better syntax highlighting
-  use('sheerun/vim-polyglot')
-
   -- Treesitter integration
   use({
     'nvim-treesitter/nvim-treesitter',
