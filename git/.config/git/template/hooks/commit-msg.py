@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 """
 Git commit hook
@@ -23,7 +23,7 @@ def bad_commit(errmsg, line=""):
     raise SyntaxError(errmsg)
 
 while True:
-    commit = sys.stdin if is_piped else open(sys.argv[1], 'r+a')
+    commit = sys.stdin if is_piped else open(sys.argv[1], 'r')
     try:
         lines = commit.read().splitlines()
         # abracadabra: remove all comments from the list of lines ;)
@@ -47,13 +47,19 @@ while True:
 
         if not m or len(m.groups()) != 3:
             bad_commit("First commit message line (header) does not "
-                    "follow format: type(scope): message", line)
+                    "follow format: type(scope): description", line)
 
         commit_type, commit_scope, commit_message = m.groups()
 
         if commit_type not in valid_commit_types:
             bad_commit("Commit type not in valid ones: %s"
                     % ", ".join(valid_commit_types), line)
+
+        if not commit_scope.strip():
+            bad_commit("Commit scope is empty", line)
+
+        if not commit_message.strip():
+            bad_commit("Commit description is empty", line)
 
         if commit_message[0].isupper():
             bad_commit("Commit subject first char not lowercase", line)
@@ -84,9 +90,12 @@ while True:
 
     # We catch that an error has happened and react accordingly
     except SyntaxError as err:
-        if raw_input("Do you want to edit it? (Your commit will "
+        if input("Do you want to edit it? (Your commit will "
                 "be rejected otherwise) [y/N] ").lower() == 'y':
-            commit.write("#\n# %s\n#" % err)
+            if not is_piped:
+                commit.close()
+                commit = open(sys.argv[1], 'a')
+            commit.write("#\n# %s\n#\n" % err)
             sys.stderr.write('\n')
             commit.close()
             call('%s %s' % (editor, sys.argv[1]), shell=True)
