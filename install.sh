@@ -23,6 +23,7 @@ brew install --cask \
 
 # LSP-related tooling
 pnpm add \
+  @astrojs/language-server \
   @tailwindcss/language-server \
   typescript \
   typescript-language-server \
