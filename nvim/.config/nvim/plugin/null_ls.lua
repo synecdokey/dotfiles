@@ -12,7 +12,14 @@ null_ls.setup({
       vim.api.nvim_create_autocmd('BufWritePre', {
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format({ bufnr = bufnr })
+          vim.lsp.buf.format({
+            filter = function(clients)
+              return vim.tbl_filter(function(client)
+                return client.name ~= 'tsserver'
+              end, clients)
+            end,
+            bufnr = bufnr,
+          })
         end,
       })
     end

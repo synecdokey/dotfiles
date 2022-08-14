@@ -102,10 +102,6 @@ local lspconf = require('lspconfig')
 
 -- Use an on_attach function to restrict lsp mapping to lsp-enabled languages
 local on_attach = function(client, bufnr)
-  if client.name == 'tsserver' then
-    client.resolved_capabilities.document_formatting = false
-  end
-
   local opts = { buffer = bufnr }
 
   -- Mappings
