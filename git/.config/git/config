@@ -21,3 +21,6 @@
 [alias]
 	# Nice and compact log
 	l = log --graph --decorate --pretty=format:'%C(auto)%h %Cblue%ad %Cred%aN %C(auto)%d %n    %s' --date=human
+[status]
+	short = true
+	branch = true
