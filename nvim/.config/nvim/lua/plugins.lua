@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
 
   -- Terminal icons
   use({
-    'yamatsum/nvim-nonicons',
+    'synecdokey/nvim-nonicons',
     requires = { 'kyazdani42/nvim-web-devicons' },
   })
 
