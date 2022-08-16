@@ -4,6 +4,7 @@ brew install \
   fd \
   fish \
   fnm \
+  gh \
   git \
   git-lfs \
   jq \
