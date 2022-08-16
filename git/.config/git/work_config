@@ -1,2 +1,4 @@
 [user]
 	email = emilia@springload.co.nz
+[push]
+  default = upstream
