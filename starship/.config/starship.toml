@@ -1,0 +1,22 @@
+add_newline = false
+
+[git_branch]
+symbol = " "
+[git_status]
+format = "\\($up_to_date$conflicted$ahead$behind$diverged$modified$staged$deleted$renamed$untracked\\) "
+conflicted = "[✘${count}](red)"
+up_to_date = "[✔](green)"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+modified = "[+${count}](red)"
+staged = "[●${count}](yellow)"
+diverged = "⇡${ahead_count}⇣${behind_count}"
+renamed = "[»${count}](yellow)"
+untracked = "[…](white)"
+deleted = "[-${count}](yellow)"
+
+style = ""
+[nodejs]
+symbol = " "
+[package]
+symbol = " "

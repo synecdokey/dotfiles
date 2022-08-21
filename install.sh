@@ -13,6 +13,7 @@ brew install \
   pgcli \
   pnpm \
   ripgrep \
+  rust \
   stow \
   stylua
 
@@ -21,6 +22,8 @@ brew install --cask \
   numi \
   obsidian \
   raycast
+
+cargo install --git https://github.com/synecdokey/starship
 
 # LSP-related tooling
 pnpm add \
