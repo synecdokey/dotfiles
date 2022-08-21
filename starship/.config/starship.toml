@@ -3,7 +3,7 @@ add_newline = false
 [git_branch]
 symbol = " "
 [git_status]
-format = "\\($up_to_date$conflicted$ahead$behind$diverged$modified$staged$deleted$renamed$untracked\\) "
+format = "\\($ahead_behind$conflicted$modified$staged$renamed$deleted$untracked\\) "
 conflicted = "[✘${count}](red)"
 up_to_date = "[✔](green)"
 ahead = "⇡${count}"

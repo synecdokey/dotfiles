@@ -12,5 +12,5 @@ set -xg VISUAL nvim
 # Makes C^z go back to the background task (vim 99% of the time)
 bind \cz 'fg'
 
-fnm env | source
+fnm env --use-on-cd | source
 starship init fish | source
