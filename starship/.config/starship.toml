@@ -14,9 +14,15 @@ diverged = "⇡${ahead_count}⇣${behind_count}"
 renamed = "[»${count}](yellow)"
 untracked = "[…](white)"
 deleted = "[-${count}](yellow)"
-
 style = ""
+
+[lua]
+symbol = " "
 [nodejs]
 symbol = " "
 [package]
 symbol = " "
+[python]
+symbol = " "
+[rust]
+symbol = " "
