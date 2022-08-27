@@ -83,20 +83,6 @@ cmp.setup({
   }),
 })
 
-cmp.setup.cmdline('/', {
-  sources = cmp.config.sources({
-    { name = 'buffer' },
-  }),
-})
-
-cmp.setup.cmdline(':', {
-  sources = cmp.config.sources({
-    { name = 'path' },
-  }, {
-    { name = 'cmdline' },
-  }),
-})
-
 -- Configure some LSP servers
 local lspconf = require('lspconfig')
 
