@@ -8,6 +8,7 @@ brew install \
   git \
   git-lfs \
   jq \
+  lazygit \
   luarocks \
   neovim \
   pgcli \
