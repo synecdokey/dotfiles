@@ -1,8 +1,9 @@
 if not set -q fish_initial
-  set -U PNPM_HOME ~/.cache/pnpm/
   set -U CARGO_HOME ~/.cache/cargo
-  set -U fish_user_paths $fish_user_paths /opt/homebrew/bin/ $PNPM_HOME $CARGO_HOME/bin/
+  set -U PNPM_HOME ~/.cache/pnpm/
   set -U SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
+  set -U fish_greeting
+  set -U fish_user_paths $fish_user_paths /opt/homebrew/bin/ $PNPM_HOME $CARGO_HOMEbin/
   set -U fish_initial
 end
 
