@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
   -- Status line
   use({
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
+    requires = { 'nvim-tree/nvim-web-devicons' },
   })
 
   -- Snippets
@@ -48,12 +48,6 @@ return require('packer').startup(function(use)
     requires = {
       'nvim-lua/plenary.nvim',
     },
-  })
-
-  -- Terminal icons
-  use({
-    'synecdokey/nvim-nonicons',
-    requires = { 'kyazdani42/nvim-web-devicons' },
   })
 
   -- Pretty lsp completion

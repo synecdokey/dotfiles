@@ -3,7 +3,6 @@ vim.o.completeopt = 'menu,menuone,noselect'
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 local lspkind = require('lspkind')
-local icons = require('nvim-nonicons')
 
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -16,36 +15,6 @@ local has_words_before = function()
 end
 
 cmp.setup({
-  formatting = {
-    format = lspkind.cmp_format({
-      symbol_map = {
-        Text = icons.get('typography'),
-        Method = 'ƒ',
-        Function = '',
-        Constructor = '',
-        Variable = icons.get('variable'),
-        Class = icons.get('class'),
-        Interface = icons.get('interface'),
-        Module = '{}',
-        Property = icons.get('tools'),
-        Unit = icons.get('note'),
-        Value = icons.get('note'),
-        Enum = icons.get('list-unordered'),
-        Keyword = icons.get('list-unordered'),
-        Snippet = icons.get('snippet'),
-        Color = icons.get('heart'),
-        File = icons.get('file'),
-        Folder = icons.get('file-directory-outline'),
-        EnumMember = icons.get('list-unordered'),
-        Constant = icons.get('constant'),
-        Struct = icons.get('struct'),
-        TypeParameter = icons.get('type'),
-        Field = icons.get('field'),
-        Reference = icons.get('file-symlink-file'),
-        Event = icons.get('zap'),
-      },
-    }),
-  },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
