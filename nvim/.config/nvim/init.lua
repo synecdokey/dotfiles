@@ -6,14 +6,5 @@ vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', vim.g.mapleader, '', { noremap = true })
 vim.api.nvim_set_keymap('v', vim.g.mapleader, '', { noremap = true })
 
--- True colours
-vim.o.termguicolors = true
-
--- Set visible trailing and tab characters
-vim.opt.list = true
-vim.opt.listchars = { tab = '»·', trail = '·' }
-
 -- Load all plugins
 require('plugins')
-
-vim.cmd.colorscheme('monokai-pro')

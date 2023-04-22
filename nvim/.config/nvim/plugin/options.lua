@@ -1,6 +1,8 @@
 local opt = vim.opt
 
 -- Global settings
+-- True colours
+vim.o.termguicolors = true
 -- -- Don't wrap lines, let the long lines stand out in their horribleness
 opt.wrap = false
 -- -- Display line numbers relative to current line
@@ -19,6 +21,10 @@ opt.splitright = true
 opt.guifont = 'Comic Code:h17'
 -- Mouse support, useful for pairing (and resizing splits)
 opt.mouse = 'a'
+
+-- Set visible trailing and tab characters
+opt.list = true
+opt.listchars = { tab = '»·', trail = '·' }
 
 -- Tab settings
 -- -- Convert tabs to spaces (use ^V<Tab> to avoid the conversion)
