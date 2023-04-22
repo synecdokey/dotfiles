@@ -16,6 +16,4 @@ vim.opt.listchars = { tab = '»·', trail = '·' }
 -- Load all plugins
 require('plugins')
 
--- Set theme
-require('catppuccin').setup()
-vim.cmd('colorscheme catppuccin')
+vim.cmd.colorscheme('monokai-pro')

@@ -7,8 +7,12 @@ return require('packer').startup(function(use)
   use('nvim-lua/plenary.nvim')
 
   -- Theme
-  use('EdenEast/nightfox.nvim')
-  use({ 'catppuccin/nvim', as = 'catppuccin' })
+  use({
+    'loctvl842/monokai-pro.nvim',
+    config = function()
+      require('monokai-pro').setup()
+    end,
+  })
 
   -- Surround
   use('tpope/vim-surround')
