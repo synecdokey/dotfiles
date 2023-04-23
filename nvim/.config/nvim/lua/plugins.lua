@@ -35,7 +35,7 @@ return require('lazy').setup({
   -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
+    build = ':TSUpdate',
     cmd = {
       'TSInstall',
       'TSUninstall',
@@ -97,7 +97,4 @@ return require('lazy').setup({
   -- Enhance lsp, since prettier & eslint don't play nice by default
   { 'jose-elias-alvarez/null-ls.nvim', lazy = true },
   { 'lewis6991/gitsigns.nvim', event = 'User FileOpened', cmd = 'Gitsigns' },
-
-  -- Pretty lsp completion
-  { 'onsails/lspkind-nvim', lazy = true },
 })
