@@ -1,3 +1,4 @@
 nvim/plugins
 .netrwhist
 fish_variables
+lazy-lock.json
