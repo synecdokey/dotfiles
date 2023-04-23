@@ -65,19 +65,16 @@ return require('lazy').setup({
   -- Completion
   {
     'hrsh7th/nvim-cmp',
-    event = 'InsertEnter',
     dependencies = {
       'nvim-lspconfig',
       'cmp-nvim-lsp',
       'cmp-buffer',
-      'cmp-path',
       'cmp_luasnip',
     },
   },
   { 'neovim/nvim-lspconfig', lazy = true },
   { 'hrsh7th/cmp-nvim-lsp', lazy = true },
   { 'hrsh7th/cmp-buffer', lazy = true },
-  { 'hrsh7th/cmp-path', lazy = true },
   { 'saadparwaiz1/cmp_luasnip', lazy = true },
 
   -- Telescope (fuzzy finder and more)
