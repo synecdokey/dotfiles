@@ -46,10 +46,15 @@ return require('lazy').setup({
       'TSInstallFromGrammar',
     },
     event = 'User FileOpened',
+    dependencies = { 'nvim-treesitter-textobjects' },
   },
 
   -- Surround
-  { 'tpope/vim-surround', event = { 'BufReadPost', 'BufNewFile' } },
+  {
+    'kylechui/nvim-surround',
+    event = 'VeryLazy',
+  },
+  { 'nvim-treesitter/nvim-treesitter-textobjects', lazy = true },
 
   -- Line plugin
   {
