@@ -53,6 +53,7 @@ return require('lazy').setup({
   {
     'kylechui/nvim-surround',
     event = 'VeryLazy',
+    config = true,
   },
   { 'nvim-treesitter/nvim-treesitter-textobjects', lazy = true },
 
@@ -61,11 +62,12 @@ return require('lazy').setup({
     'nvim-lualine/lualine.nvim',
     event = 'VimEnter',
     dependencies = { 'nvim-web-devicons' },
+    cond = not vim.g.vscode,
   },
-  { 'nvim-tree/nvim-web-devicons', lazy = true },
+  { 'nvim-tree/nvim-web-devicons', lazy = true, cond = not vim.g.vscode },
 
   -- Snippets
-  { 'l3mon4d3/luasnip', event = 'InsertEnter' },
+  { 'l3mon4d3/luasnip', event = 'InsertEnter', cond = not vim.g.vscode },
 
   -- Completion
   {
@@ -76,11 +78,12 @@ return require('lazy').setup({
       'cmp-buffer',
       'cmp_luasnip',
     },
+    cond = not vim.g.vscode,
   },
-  { 'neovim/nvim-lspconfig', lazy = true },
-  { 'hrsh7th/cmp-nvim-lsp', lazy = true },
-  { 'hrsh7th/cmp-buffer', lazy = true },
-  { 'saadparwaiz1/cmp_luasnip', lazy = true },
+  { 'neovim/nvim-lspconfig', lazy = true, cond = not vim.g.vscode },
+  { 'hrsh7th/cmp-nvim-lsp', lazy = true, cond = not vim.g.vscode },
+  { 'hrsh7th/cmp-buffer', lazy = true, cond = not vim.g.vscode },
+  { 'saadparwaiz1/cmp_luasnip', lazy = true, cond = not vim.g.vscode },
 
   -- Telescope (fuzzy finder and more)
   {
@@ -88,6 +91,8 @@ return require('lazy').setup({
     lazy = true,
     cmd = 'Telescope',
     dependencies = { 'plenary.nvim' },
+    cond = not vim.g.vscode,
+    opts = { defaults = { prompt_prefix = ' ' } },
   },
 
   -- Harpoon, advanced buffer navigation
@@ -97,9 +102,25 @@ return require('lazy').setup({
     dependencies = {
       'plenary.nvim',
     },
+    cond = not vim.g.vscode,
+  },
+
+  -- Commenting stuff semantically
+  {
+    'numToStr/Comment.nvim',
+    config = true,
   },
 
   -- Enhance lsp, since prettier & eslint don't play nice by default
-  { 'jose-elias-alvarez/null-ls.nvim', lazy = true },
-  { 'lewis6991/gitsigns.nvim', event = 'User FileOpened', cmd = 'Gitsigns' },
+  { 'jose-elias-alvarez/null-ls.nvim', lazy = true, cond = not vim.g.vscode },
+  {
+    'lewis6991/gitsigns.nvim',
+    event = 'User FileOpened',
+    cmd = 'Gitsigns',
+    cond = not vim.g.vscode,
+    opts = {
+      current_line_blame_opts = { delay = 200 },
+      keymaps = {},
+    },
+  },
 })
