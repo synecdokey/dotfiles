@@ -49,7 +49,7 @@ if not vim.g.vscode then
           color = { fg = '#ffffff', gui = 'bold' },
         },
       },
-      lualine_y = {},
+      lualine_y = { 'location' },
       lualine_z = { { 'filetype', colored = true, icon_only = true } },
     },
     options = {

@@ -30,6 +30,7 @@ return require('lazy').setup({
       require('monokai-pro').setup()
       vim.cmd.colorscheme('monokai-pro')
     end,
+    cond = not vim.g.vscode,
   },
 
   -- Treesitter
