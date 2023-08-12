@@ -18,7 +18,9 @@ opt.colorcolumn = '80'
 -- -- Open vertical splits to the right
 opt.splitright = true
 -- -- GUI font
-opt.guifont = 'Comic Code:h17'
+opt.guifont = 'Comic Code:h16'
+-- -- GUI line height
+vim.opt.linespace = 11
 -- Mouse support, useful for pairing (and resizing splits)
 opt.mouse = 'a'
 
