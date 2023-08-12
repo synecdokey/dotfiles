@@ -121,7 +121,6 @@ return require('lazy').setup({
     cond = not vim.g.vscode,
     opts = {
       current_line_blame_opts = { delay = 200 },
-      keymaps = {},
     },
   },
 })
