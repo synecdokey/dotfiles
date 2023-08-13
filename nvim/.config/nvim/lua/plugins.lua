@@ -112,6 +112,18 @@ return require('lazy').setup({
     config = true,
   },
 
+  -- Better terminal integration, needed in neovide
+  {
+    'akinsho/toggleterm.nvim',
+    opts = {
+      shell = 'fish',
+      on_open = function()
+        vim.cmd('startinsert!')
+      end,
+    },
+    cond = vim.g.neovide,
+  },
+
   -- Enhance lsp, since prettier & eslint don't play nice by default
   { 'jose-elias-alvarez/null-ls.nvim', lazy = true, cond = not vim.g.vscode },
   {

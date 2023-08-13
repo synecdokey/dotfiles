@@ -20,7 +20,7 @@ opt.splitright = true
 -- -- GUI font
 opt.guifont = 'Comic Code:h16'
 -- -- GUI line height
-vim.opt.linespace = 11
+opt.linespace = 11
 -- Mouse support, useful for pairing (and resizing splits)
 opt.mouse = 'a'
 
