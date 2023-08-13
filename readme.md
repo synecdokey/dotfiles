@@ -15,7 +15,7 @@ makes it super easy to deploy on a new machine. `stow <path-to-directory>`
 without the `/` will install the associated config using symlinks for ease of
 update.
 
-And since I'm using a mac, I'm running brew (fairly naively)
+And since I'm using a mac, I'm running `brew` (fairly naively)
 
 ## Available configuration
 

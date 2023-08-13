@@ -20,8 +20,8 @@ brew install \
 
 brew install --cask \
   kitty \
+  neovide \
   numi \
-  obsidian \
   raycast
 
 cargo install --git https://github.com/synecdokey/starship
@@ -33,7 +33,3 @@ pnpm add \
   typescript \
   typescript-language-server \
   vscode-langservers-extracted --global
-
-# Install a package manager for neovim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-  "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/packer/start/packer.nvim
