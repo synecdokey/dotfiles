@@ -84,6 +84,5 @@ if not vim.g.vscode then
     })
   end
 
-  vim.api.nvim_set_keymap('i', '<C-E>', '<Plug>luasnip-next-choice', {})
-  vim.api.nvim_set_keymap('s', '<C-E>', '<Plug>luasnip-next-choice', {})
+  vim.keymap.set({ 'i', 's' }, '<c-e>', '<plug>luasnip-next-choice')
 end

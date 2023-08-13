@@ -8,20 +8,19 @@ vim.keymap.set({ 'n', 'v' }, '<Right>', '<cmd>wincmd l<cr>')
 vim.keymap.set('', 'Q', '<nop>')
 if vim.g.neovide then
   --- Copy/paste in neovide
-  vim.keymap.set('v', '<D-c>', '"+y')
-  vim.keymap.set('n', '<D-v>', '"+P')
-  vim.keymap.set('v', '<D-v>', '"+P')
-  vim.keymap.set('c', '<D-v>', '<C-R>+')
-  vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli')
+  vim.keymap.set('v', '<d-c>', '"+y')
+  vim.keymap.set({ 'n', 'v' }, '<d-v>', '"+P')
+  vim.keymap.set('c', '<d-v>', '<c-r>+')
+  vim.keymap.set('i', '<d-v>', '<esc>l"+Pli')
   --- Scale shortcuts for presentations
   vim.g.neovide_scale_factor = 1.0
   local change_scale_factor = function(delta)
     vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
   end
-  vim.keymap.set('n', '<C-=>', function()
+  vim.keymap.set('n', '<c-=>', function()
     change_scale_factor(1.25)
   end)
-  vim.keymap.set('n', '<C-->', function()
+  vim.keymap.set('n', '<c-->', function()
     change_scale_factor(1 / 1.25)
   end)
 end
