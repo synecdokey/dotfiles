@@ -1,11 +1,9 @@
-if not set -q fish_initial
-  set -U CARGO_HOME ~/.cache/cargo
-  set -U PNPM_HOME ~/.cache/pnpm/
-  set -U SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
-  set -U fish_greeting
-  set -U fish_user_paths $fish_user_paths /opt/homebrew/bin/ $PNPM_HOME $CARGO_HOMEbin/
-  set -U fish_initial
-end
+set -Ux CARGO_HOME ~/.cache/cargo/
+set -Ux PNPM_HOME ~/.cache/pnpm/
+set -U fish_greeting
+fish_add_path /opt/homebrew/bin/
+fish_add_path $PNPM_HOME
+fish_add_path $CARGO_HOME/bin/
 
 set -xg XDG_CONFIG_HOME ~/.config
 set -xg VISUAL nvim
