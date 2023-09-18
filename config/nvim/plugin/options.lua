@@ -24,6 +24,9 @@ opt.linespace = 11
 -- Mouse support, useful for pairing (and resizing splits)
 opt.mouse = 'a'
 
+vim.g.neovide_touch_deadzone = 128.0
+vim.g.neovide_touch_drag_timeout = 0.72
+
 -- Set visible trailing and tab characters
 opt.list = true
 opt.listchars = { tab = '»·', trail = '·' }

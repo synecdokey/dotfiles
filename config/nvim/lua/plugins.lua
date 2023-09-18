@@ -135,4 +135,12 @@ return require('lazy').setup({
       current_line_blame_opts = { delay = 200 },
     },
   },
+
+  -- Copilot is a friend
+  {
+    'zbirenbaum/copilot.lua',
+    event = 'VeryLazy',
+    cmd = 'Copilot',
+    config = true,
+  },
 })

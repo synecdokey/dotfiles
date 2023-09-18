@@ -6,11 +6,12 @@ vim.keymap.set({ 'n', 'v' }, '<Up>', '<cmd>wincmd k<cr>')
 vim.keymap.set({ 'n', 'v' }, '<Right>', '<cmd>wincmd l<cr>')
 --- netrw but easier
 vim.keymap.set({ 'n', 'v' }, '<leader>e', '<cmd>Explore<cr>')
+--- System clipboard copy/paste
+vim.keymap.set('v', '<d-c>', '"+y')
 --- Disable ex-mode
 vim.keymap.set('', 'Q', '<nop>')
 if vim.g.neovide then
   --- Copy/paste in neovide
-  vim.keymap.set('v', '<d-c>', '"+y')
   vim.keymap.set({ 'n', 'v' }, '<d-v>', '"+P')
   vim.keymap.set('c', '<d-v>', '<c-r>+')
   vim.keymap.set('i', '<d-v>', '<esc>l"+Pli')
