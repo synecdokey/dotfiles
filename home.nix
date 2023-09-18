@@ -4,8 +4,15 @@
     username = "emiliazapata";
     homeDirectory = "/Users/emiliazapata";
     packages = [
+      pkgs.fd
+      pkgs.fnm
+      pkgs.gh
       pkgs.git
+      pkgs.jq
       pkgs.neovim
+      pkgs.ripgrep
+      pkgs.starship
+      pkgs.stylua
     ];
     file.".config" = { source = ./config; recursive = true; };
   };
@@ -13,5 +20,27 @@
   xdg.enable = true;
 
   programs.home-manager.enable = true;
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+set -q __fish_personal_config_sourced; and exit
+set -g __fish_personal_config_sourced 1
+
+set -Ux CARGO_HOME ~/.cache/cargo/
+set -Ux PNPM_HOME ~/.cache/pnpm/
+set -U fish_greeting
+
+fish_add_path $PNPM_HOME
+fish_add_path $CARGO_HOME/bin/
+
+set -xg XDG_CONFIG_HOME ~/.config
+set -xg VISUAL nvim
+
+# Makes C^z go back to the background task (vim 99% of the time)
+bind \cz 'fg'
+
+fnm env --use-on-cd | source
+starship init fish | source
+    '';
+  };
 }

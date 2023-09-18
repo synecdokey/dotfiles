@@ -1,22 +1,13 @@
 #!/usr/bin/env sh
 
 brew install \
-  fd \
-  fish \
   fnm \
-  gh \
-  git \
   git-lfs \
-  jq \
   lazygit \
   luarocks \
-  neovim \
   pgcli \
   pnpm \
-  ripgrep \
-  rust \
-  stow \
-  stylua
+  rust
 
 brew install --cask \
   kitty \
