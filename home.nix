@@ -23,9 +23,6 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-set -q __fish_personal_config_sourced; and exit
-set -g __fish_personal_config_sourced 1
-
 set -Ux CARGO_HOME ~/.cache/cargo/
 set -Ux PNPM_HOME ~/.cache/pnpm/
 set -U fish_greeting
