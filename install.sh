@@ -1,14 +1,5 @@
 #!/usr/bin/env sh
 
-brew install \
-  fnm \
-  git-lfs \
-  lazygit \
-  luarocks \
-  pgcli \
-  pnpm \
-  rust
-
 brew install --cask \
   kitty \
   neovide \

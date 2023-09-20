@@ -8,8 +8,10 @@
       fnm
       gh
       git
+      git-lfs
       jq
       neovim
+      nodePackages.pnpm
       ripgrep
       starship
       stylua
