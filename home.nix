@@ -3,16 +3,16 @@
     stateVersion = "23.11";
     username = "emiliazapata";
     homeDirectory = "/Users/emiliazapata";
-    packages = [
-      pkgs.fd
-      pkgs.fnm
-      pkgs.gh
-      pkgs.git
-      pkgs.jq
-      pkgs.neovim
-      pkgs.ripgrep
-      pkgs.starship
-      pkgs.stylua
+    packages = with pkgs; [
+      fd
+      fnm
+      gh
+      git
+      jq
+      neovim
+      ripgrep
+      starship
+      stylua
     ];
     file.".config" = { source = ./config; recursive = true; };
   };

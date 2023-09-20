@@ -16,10 +16,10 @@ without the `/` will install the associated config using symlinks for ease of
 update.
 
 And since I'm using a mac, I'm running `brew` (fairly naively) for now, but I am
-starting to leverage `nix` now, so the incoming command is:
+starting to leverage `nix` now, so the command to run is:
 
 ```sh
-nix run github:nix-community/home-manager -- switch --flake ~/dotfiles/
+nix run github:nix-community/home-manager -- switch --flake .
 ```
 
 ## Available configuration
