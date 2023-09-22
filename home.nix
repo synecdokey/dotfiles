@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home = {
     stateVersion = "23.11";
@@ -26,6 +26,10 @@
   xdg.enable = true;
 
   programs.home-manager.enable = true;
+  programs.gpg = {
+    enable = true;
+    homedir = "${config.xdg.configHome}/gnupg";
+  };
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
