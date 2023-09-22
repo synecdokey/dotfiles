@@ -20,6 +20,7 @@
       stylua
     ];
     file.".config" = { source = ./config; recursive = true; };
+    file.".zshrc" = { source = ./.zshrc; };
   };
 
   xdg.enable = true;
