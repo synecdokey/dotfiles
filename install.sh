@@ -1,10 +1,8 @@
 #!/usr/bin/env sh
 
 brew install --cask \
-  kitty \
   neovide \
-  numi \
-  raycast
+  numi
 
 cargo install --git https://github.com/synecdokey/starship
 

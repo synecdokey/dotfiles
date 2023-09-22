@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+  nixpkgs.config.allowUnfreePredicate = (pkg: true);
   home = {
     stateVersion = "23.11";
     username = "emiliazapata";
@@ -10,8 +11,10 @@
       git
       git-lfs
       jq
+      kitty
       neovim
       nodePackages.pnpm
+      raycast
       ripgrep
       starship
       stylua
