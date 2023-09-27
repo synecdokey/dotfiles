@@ -18,6 +18,7 @@
       ripgrep
       starship
       stylua
+      yabai
     ];
     file.".config" = { source = ./config; recursive = true; };
     file.".zshrc" = { source = ./.zshrc; };
