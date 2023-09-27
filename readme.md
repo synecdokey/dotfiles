@@ -1,26 +1,24 @@
 # Dot Files
 
-Just a repertoire of the configuration I use on my machine.
+Just a repertoire of the configuration I use on my machines.
 
 ## Usage
 
-To install my entire setup:
-
-```shell
-./install.sh
-```
-
-The repo structure is meant to be used in coordination with GNU's `stow`, as it
-makes it super easy to deploy on a new machine. `stow <path-to-directory>`
-without the `/` will install the associated config using symlinks for ease of
-update.
-
-And since I'm using a mac, I'm running `brew` (fairly naively) for now, but I am
-starting to leverage `nix` now, so the command to run is:
+I'm using `nix` to manage my dotfiles now, so the command to run the first time
+around is:
 
 ```sh
 nix run github:nix-community/home-manager -- switch --flake .
 ```
+
+After the first run, home-manager is available directly, and so you can do:
+
+```sh
+home-manager switch --flake .
+```
+
+If you want to know more, I did write about it
+[here](https://dev.to/synecdokey/nix-on-macos-2oj3).
 
 ## Available configuration
 
@@ -34,6 +32,3 @@ I don't use _that_ much software to begin with, so the list is pretty short:
   such is the world we live in
 - `fish` as my shell. It's smart and spares me a lot of typing (relatively
   speaking)
-
-There's also a small `brew` script that installs the stuff I like to use
-without me having to remember it all.
