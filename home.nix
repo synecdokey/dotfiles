@@ -18,6 +18,7 @@
       ripgrep
       starship
       stylua
+      wezterm
       yabai
     ];
     file.".config" = { source = ./config; recursive = true; };
