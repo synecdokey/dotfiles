@@ -143,4 +143,11 @@ return require('lazy').setup({
     cmd = 'Copilot',
     config = true,
   },
+
+  -- Better TS experience than typescript-language-server
+  {
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'plenary.nvim', 'nvim-lspconfig' },
+    config = true,
+  },
 })

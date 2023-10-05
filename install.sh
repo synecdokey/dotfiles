@@ -3,6 +3,4 @@
 pnpm add \
   @astrojs/language-server \
   @tailwindcss/language-server \
-  typescript \
-  typescript-language-server \
   vscode-langservers-extracted --global

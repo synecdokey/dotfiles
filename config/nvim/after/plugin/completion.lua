@@ -68,15 +68,11 @@ if not vim.g.vscode then
   -- Wire completion to the LSP
   local caps = require('cmp_nvim_lsp').default_capabilities()
 
-  local servers = { 'cssls', 'tsserver', 'tailwindcss', 'astro' }
+  local servers = { 'cssls', 'tailwindcss', 'astro' }
 
   for _, lsp in ipairs(servers) do
     lspconf[lsp].setup({
       on_attach = on_attach,
-      init_options = {
-        hostInfo = 'neovim',
-        npmLocation = '/opt/homebrew/bin/npm',
-      },
       capabilities = caps,
       flags = {
         debounce_text_changes = 150,
