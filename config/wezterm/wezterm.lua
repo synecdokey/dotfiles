@@ -8,8 +8,8 @@ return {
 		"Comic Code",
 		"nonicons",
 	}),
-	font_size = 15,
-	line_height = 1.4,
+	font_size = 16,
+	line_height = 1.375,
 	window_decorations = "RESIZE | MACOS_FORCE_DISABLE_SHADOW",
 	window_padding = {
 		left = 4,
