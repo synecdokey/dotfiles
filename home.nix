@@ -22,6 +22,7 @@
       yabai
     ];
     file.".config" = { source = ./config; recursive = true; };
+    file.".zprofile" = { source = ./.zprofile; };
     file.".zshrc" = { source = ./.zshrc; };
   };
 
