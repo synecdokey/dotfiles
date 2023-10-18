@@ -144,6 +144,11 @@ return require('lazy').setup({
     config = true,
   },
 
+  {
+    'windwp/nvim-autopairs',
+    config = true,
+  },
+
   -- Better TS experience than typescript-language-server
   {
     'pmizio/typescript-tools.nvim',
