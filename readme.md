@@ -20,6 +20,15 @@ home-manager switch --flake .
 If you want to know more, I did write about it
 [here](https://dev.to/synecdokey/nix-on-macos-2oj3).
 
+## Updating dependencies
+
+Since this repository is a nix flake (basically a self-contained nix package),
+upgrading software is a single command away:
+
+```sh
+nix flake update .
+```
+
 ## Available configuration
 
 I don't use _that_ much software to begin with, so the list is pretty short:
