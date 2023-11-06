@@ -11,7 +11,6 @@
       git
       git-lfs
       jq
-      kitty
       neovim
       nodePackages.pnpm
       raycast

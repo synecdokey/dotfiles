@@ -26,7 +26,7 @@ I don't use _that_ much software to begin with, so the list is pretty short:
 
 - `neovim` which is my primary text editor. The config is not compatible with
   `vim` as I'm using plenty of lua.
-- `kitty` my terminal of choice as I find `iTerm2` and `hyper` slightly too
+- `wezterm` my terminal of choice as I find `iTerm2` and `hyper` slightly too
   laggy for terminal use, and `alacritty` is not a great macos citizen
 - `git` because that's pretty much required these days. I prefer `hg`, but
   such is the world we live in
