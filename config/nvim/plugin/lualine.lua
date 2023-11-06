@@ -56,7 +56,7 @@ if not vim.g.vscode then
       icons_enabled = false,
       component_separators = {},
       section_separators = {},
-      theme = 'monokai-pro',
+      theme = 'terafox',
     },
   })
 end

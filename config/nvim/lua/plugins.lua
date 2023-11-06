@@ -23,12 +23,12 @@ return require('lazy').setup({
 
   -- Colorscheme
   {
-    'loctvl842/monokai-pro.nvim',
+    'EdenEast/nightfox.nvim',
     priority = 1000,
     lazy = false,
     config = function()
-      require('monokai-pro').setup()
-      vim.cmd.colorscheme('monokai-pro')
+      require('nightfox').setup()
+      vim.cmd.colorscheme('terafox')
     end,
     cond = not vim.g.vscode,
   },
