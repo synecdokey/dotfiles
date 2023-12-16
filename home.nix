@@ -15,6 +15,7 @@
       nodePackages.pnpm
       raycast
       ripgrep
+      rustup
       starship
       stylua
       wezterm
