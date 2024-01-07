@@ -7,9 +7,6 @@
     packages = with pkgs; [
       fd
       fnm
-      gh
-      git
-      git-lfs
       jq
       neovim
       nodePackages.pnpm

@@ -1,3 +1,3 @@
 {
-  imports = [ ./fish ];
+  imports = [ ./fish ./git ];
 }
