@@ -1,3 +1,3 @@
 {
-  imports = [ ./fish ./git ];
+  imports = [ ./fish ./git ./nvim ];
 }

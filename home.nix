@@ -8,11 +8,7 @@
       fd
       fnm
       jq
-      neovim
       nodePackages.pnpm
-      nodePackages."@tailwindcss/language-server"
-      nodePackages."@astrojs/language-server"
-      vscode-langservers-extracted
       raycast
       ripgrep
       rustup
