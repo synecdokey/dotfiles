@@ -8,4 +8,4 @@ vim.g.mapleader = ' '
 vim.keymap.set({ 'n', 'v' }, vim.g.mapleader, '<nop>')
 
 -- Load all plugins
-require('plugins')
+require('emilia')
