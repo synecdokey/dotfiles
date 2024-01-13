@@ -6,12 +6,11 @@ return {
   opts = {
     current_line_blame_opts = { delay = 200 },
   },
-  config = function(_, opts)
-    require('gitsigns').setup(opts)
-    vim.keymap.set(
-      'n',
+  keys = {
+    {
       '<leader>gb',
-      '<cmd>Gitsigns toggle_current_line_blame<cr>'
-    )
-  end,
+      '<cmd>Gitsigns toggle_current_line_blame<cr>',
+      desc = 'Blame line toggle',
+    },
+  },
 }
