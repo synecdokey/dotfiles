@@ -66,16 +66,6 @@ return {
   { 'hrsh7th/cmp-buffer', lazy = true, cond = not vim.g.vscode },
   { 'saadparwaiz1/cmp_luasnip', lazy = true, cond = not vim.g.vscode },
 
-  -- Telescope (fuzzy finder and more)
-  {
-    'nvim-telescope/telescope.nvim',
-    lazy = true,
-    cmd = 'Telescope',
-    dependencies = { 'plenary.nvim' },
-    cond = not vim.g.vscode,
-    opts = { defaults = { prompt_prefix = ' ' } },
-  },
-
   -- Harpoon, advanced buffer navigation
   {
     'theprimeagen/harpoon',
