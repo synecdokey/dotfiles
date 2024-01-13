@@ -1,5 +1,9 @@
-if not vim.g.vscode then
-  require('lualine').setup({
+return {
+  'nvim-lualine/lualine.nvim',
+  event = 'VimEnter',
+  dependencies = { 'nvim-web-devicons' },
+  cond = not vim.g.vscode,
+  opts = {
     sections = {
       lualine_a = {
         {
@@ -58,5 +62,5 @@ if not vim.g.vscode then
       section_separators = {},
       theme = 'terafox',
     },
-  })
-end
+  },
+}

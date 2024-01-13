@@ -45,12 +45,6 @@ return {
   { 'nvim-treesitter/nvim-treesitter-textobjects', lazy = true },
 
   -- Line plugin
-  {
-    'nvim-lualine/lualine.nvim',
-    event = 'VimEnter',
-    dependencies = { 'nvim-web-devicons' },
-    cond = not vim.g.vscode,
-  },
   { 'nvim-tree/nvim-web-devicons', lazy = true, cond = not vim.g.vscode },
 
   -- Snippets
