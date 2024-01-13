@@ -94,15 +94,6 @@ return {
 
   -- Enhance lsp, since prettier & eslint don't play nice by default
   { 'jose-elias-alvarez/null-ls.nvim', lazy = true, cond = not vim.g.vscode },
-  {
-    'lewis6991/gitsigns.nvim',
-    event = 'User FileOpened',
-    cmd = 'Gitsigns',
-    cond = not vim.g.vscode,
-    opts = {
-      current_line_blame_opts = { delay = 200 },
-    },
-  },
 
   -- Copilot is a friend
   {
