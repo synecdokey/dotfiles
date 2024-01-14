@@ -61,9 +61,6 @@ return {
     config = true,
   },
 
-  -- Enhance lsp, since prettier & eslint don't play nice by default
-  { 'jose-elias-alvarez/null-ls.nvim', lazy = true, cond = not vim.g.vscode },
-
   ----  -- Copilot is a friend
   -- {
   --   'zbirenbaum/copilot.lua',
