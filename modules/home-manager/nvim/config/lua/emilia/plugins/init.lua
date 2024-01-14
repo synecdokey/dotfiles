@@ -27,16 +27,6 @@ return {
 
   { 'nvim-tree/nvim-web-devicons', lazy = true, cond = not vim.g.vscode },
 
-  -- Harpoon, advanced buffer navigation
-  {
-    'theprimeagen/harpoon',
-    event = 'VeryLazy',
-    dependencies = {
-      'plenary.nvim',
-    },
-    cond = not vim.g.vscode,
-  },
-
   -- Commenting stuff semantically
   {
     'numToStr/Comment.nvim',
