@@ -14,13 +14,16 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugin manager boilerplate
 return require('lazy').setup('emilia.plugins', {
   defaults = { lazy = true },
-  rtp = {
-    disabled_plugins = {
-      'gzip',
-      'tarPlugin',
-      'toHtml',
-      'tutor',
-      'zipPlugin',
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        'gzip',
+        'rplugin',
+        'tarPlugin',
+        'tohtml',
+        'tutor',
+        'zipPlugin',
+      },
     },
   },
 })
