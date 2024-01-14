@@ -18,30 +18,12 @@ return {
     cond = not vim.g.vscode,
   },
 
-  -- Treesitter
-  {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    cmd = {
-      'TSInstall',
-      'TSUninstall',
-      'TSUpdate',
-      'TSUpdateSync',
-      'TSInstallInfo',
-      'TSInstallSync',
-      'TSInstallFromGrammar',
-    },
-    event = 'User FileOpened',
-    dependencies = { 'nvim-treesitter-textobjects' },
-  },
-
   -- Surround
   {
     'kylechui/nvim-surround',
     event = 'VeryLazy',
     config = true,
   },
-  { 'nvim-treesitter/nvim-treesitter-textobjects', lazy = true },
 
   { 'nvim-tree/nvim-web-devicons', lazy = true, cond = not vim.g.vscode },
 
