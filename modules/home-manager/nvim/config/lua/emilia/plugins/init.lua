@@ -32,15 +32,6 @@ return {
     'numToStr/Comment.nvim',
     config = true,
   },
-
-  ----  -- Copilot is a friend
-  -- {
-  --   'zbirenbaum/copilot.lua',
-  --   event = 'VeryLazy',
-  --   cmd = 'Copilot',
-  --   config = true,
-  -- },
-
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
