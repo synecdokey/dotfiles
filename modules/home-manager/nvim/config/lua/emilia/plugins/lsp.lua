@@ -24,7 +24,7 @@ return {
       local lspconf = require('lspconfig')
       local caps = require('cmp_nvim_lsp').default_capabilities()
 
-      local servers = { 'cssls', 'tailwindcss', 'astro', 'eslint' }
+      local servers = { 'cssls', 'tailwindcss', 'gleam', 'astro', 'eslint' }
 
       for _, lsp in ipairs(servers) do
         lspconf[lsp].setup({

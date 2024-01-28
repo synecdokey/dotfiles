@@ -5,8 +5,10 @@
     username = "emiliazapata";
     homeDirectory = "/Users/emiliazapata";
     packages = with pkgs; [
+      erlang
       fd
       fnm
+      gleam
       jq
       nodePackages.pnpm
       raycast
