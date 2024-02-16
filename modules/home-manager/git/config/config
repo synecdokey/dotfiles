@@ -24,3 +24,5 @@
 [status]
 	short = true
 	branch = true
+[rerere]
+  enabled = true
