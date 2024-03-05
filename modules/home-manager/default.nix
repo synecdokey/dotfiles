@@ -1,3 +1,3 @@
 {
-  imports = [ ./fish ./git ./nvim ];
+  imports = [ ./direnv ./fish ./git ./nvim ];
 }
