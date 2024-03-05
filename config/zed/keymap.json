@@ -1,0 +1,26 @@
+[
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "shift-k": "editor::Hover",
+      "space p": "file_finder::Toggle",
+      "ctrl-z": "terminal_panel::ToggleFocus",
+      "left": ["workspace::ActivatePaneInDirection", "Left"],
+      "right": ["workspace::ActivatePaneInDirection", "Right"],
+      "up": ["workspace::ActivatePaneInDirection", "Up"],
+      "down": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-z": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "%": "project_panel::NewFile"
+    }
+  }
+]
