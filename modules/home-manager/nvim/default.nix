@@ -1,5 +1,6 @@
-{ pkgs, config, ... }: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
+    alejandra
     neovim
     nil
     nodePackages."@tailwindcss/language-server"

@@ -7,6 +7,7 @@ return {
       javascript = { 'prettier' },
       javascriptreact = { 'prettier' },
       lua = { 'stylua' },
+      nix = { 'alejandra' },
       typescript = { 'prettier' },
       typescriptreact = { 'prettier' },
     },
