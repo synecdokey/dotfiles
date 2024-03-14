@@ -9,11 +9,15 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: {
+  outputs = {
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
     homeConfigurations = {
       "emiliazapata" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        modules = [ ./home.nix ];
+        modules = [./home.nix];
       };
     };
   };

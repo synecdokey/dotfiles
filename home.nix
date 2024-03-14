@@ -1,5 +1,9 @@
-{ pkgs, config, ... }: {
-  nixpkgs.config.allowUnfreePredicate = (pkg: true);
+{
+  pkgs,
+  config,
+  ...
+}: {
+  nixpkgs.config.allowUnfreePredicate = pkg: true;
   home = {
     stateVersion = "23.11";
     username = "emiliazapata";
@@ -19,9 +23,13 @@
       wezterm
       yabai
     ];
-    file.".config" = { source = ./config; recursive = true; };
-    file.".zprofile" = { source = ./.zprofile; };
-    file.".zshrc" = { source = ./.zshrc; };
+
+    file.".config" = {
+      source = ./config;
+      recursive = true;
+    };
+    file.".zprofile" = {source = ./.zprofile;};
+    file.".zshrc" = {source = ./.zshrc;};
   };
 
   xdg.enable = true;
@@ -31,5 +39,5 @@
     enable = true;
     homedir = "${config.xdg.configHome}/gnupg";
   };
-  imports = [ ./modules/home-manager ];
+  imports = [./modules/home-manager];
 }
