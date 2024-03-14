@@ -25,4 +25,4 @@
 	short = true
 	branch = true
 [rerere]
-  enabled = true
+	enabled = true
