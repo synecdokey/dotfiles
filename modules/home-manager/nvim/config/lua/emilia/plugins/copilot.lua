@@ -15,10 +15,9 @@ return {
         dismiss = '<m-d>',
       },
     },
-    fitletypes = {
+    filetypes = {
       -- Somehow this is disabled by default
       markdown = true,
     },
   },
-  config = true,
 }
