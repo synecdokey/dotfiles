@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugin manager boilerplate
 return require('lazy').setup('emilia.plugins', {
   defaults = { lazy = true },
+  lockfile = vim.fn.getenv('HOME') .. '/dotfiles/lazy-lock.json',
   performance = {
     rtp = {
       disabled_plugins = {
