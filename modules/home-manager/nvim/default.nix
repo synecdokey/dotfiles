@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     alejandra
-    neovim
     nil
     nodePackages."@tailwindcss/language-server"
     nodePackages."@astrojs/language-server"
@@ -11,5 +10,12 @@
   xdg.configFile.nvim = {
     source = ./config;
     recursive = true;
+  };
+
+  programs.neovim = {
+    enable = true;
+    withPython3 = false;
+    withRuby = false;
+    withNodeJs = false;
   };
 }
