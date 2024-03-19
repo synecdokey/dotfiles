@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = {
+  outputs = inputs @ {
     nixpkgs,
     home-manager,
     ...
@@ -18,6 +19,9 @@
       "emiliazapata" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         modules = [./home.nix];
+        extraSpecialArgs = {
+          inherit inputs;
+        };
       };
     };
   };

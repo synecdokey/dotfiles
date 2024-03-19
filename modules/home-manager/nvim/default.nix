@@ -9,6 +9,7 @@
     withPython3 = false;
     withRuby = false;
     withNodeJs = false;
+    package = pkgs.neovim-nightly;
     extraPackages = with pkgs; [
       alejandra
       nil
