@@ -6,6 +6,12 @@ return {
     formatters_by_ft = {
       lua = { 'stylua' },
       nix = { 'alejandra' },
+      javascript = { 'biome' },
+      typescript = { 'biome' },
+      javascriptreact = { 'biome' },
+      typescriptreact = { 'biome' },
+      json = { 'biome' },
+      jsonc = { 'biome' },
     },
     format_on_save = { timeout_ms = 500 },
   },

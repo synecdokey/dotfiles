@@ -24,8 +24,13 @@ return {
       local lspconf = require('lspconfig')
       local caps = require('cmp_nvim_lsp').default_capabilities()
 
-      local servers =
-        { 'biome', 'cssls', 'tailwindcss', 'gleam', 'astro', 'nil_ls' }
+      local servers = { 'cssls', 'tailwindcss', 'gleam', 'astro', 'nil_ls' }
+
+      lspconf.biome.setup({
+        cmd = { 'pnpm', 'biome', 'lsp-proxy' },
+        capabilities = caps,
+        single_file_support = true,
+      })
 
       for _, lsp in ipairs(servers) do
         lspconf[lsp].setup({
