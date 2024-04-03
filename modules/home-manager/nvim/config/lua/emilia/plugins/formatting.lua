@@ -12,6 +12,7 @@ return {
       typescriptreact = { 'biome' },
       json = { 'biome' },
       jsonc = { 'biome' },
+      gleam = { 'gleam' },
     },
     format_on_save = { timeout_ms = 500 },
   },
