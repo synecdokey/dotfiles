@@ -114,6 +114,9 @@ return {
     dependencies = { 'plenary.nvim', 'nvim-lspconfig' },
     opts = {
       on_attach = on_attach,
+      jsx_close_tag = {
+        enable = true,
+      },
     },
   },
 }
