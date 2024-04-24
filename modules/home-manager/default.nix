@@ -3,7 +3,6 @@
   home.packages = with pkgs; [
     erlang
     fd
-    fnm
     gleam
     jq
     nodePackages.pnpm
