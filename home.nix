@@ -1,5 +1,4 @@
 {
-  pkgs,
   config,
   inputs,
   ...
@@ -10,21 +9,6 @@
     stateVersion = "23.11";
     username = "emiliazapata";
     homeDirectory = "/Users/emiliazapata";
-    packages = with pkgs; [
-      erlang
-      fd
-      fnm
-      gleam
-      jq
-      nodePackages.pnpm
-      raycast
-      ripgrep
-      rustup
-      starship
-      stylua
-      wezterm
-      yabai
-    ];
 
     file.".config" = {
       source = ./config;
