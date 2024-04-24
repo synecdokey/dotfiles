@@ -5,6 +5,7 @@
     fd
     gleam
     jq
+    nodejs
     nodePackages.pnpm
     raycast
     ripgrep
