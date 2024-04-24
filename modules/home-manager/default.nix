@@ -14,5 +14,6 @@
     stylua
     wezterm
     yabai
+    zoxide
   ];
 }

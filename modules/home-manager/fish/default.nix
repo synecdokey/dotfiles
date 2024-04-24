@@ -17,6 +17,7 @@
 
       fnm env --use-on-cd | source
       starship init fish | source
+      zoxide init fish | source
     '';
     shellAbbrs = {
       vi = "nvim";
