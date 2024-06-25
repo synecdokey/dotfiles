@@ -1,10 +1,5 @@
-{
-  config,
-  inputs,
-  ...
-}: {
+{config, ...}: {
   nixpkgs.config.allowUnfreePredicate = pkg: true;
-  nixpkgs.overlays = [inputs.neovim-nightly-overlay.overlay];
   home = {
     stateVersion = "23.11";
     username = "emiliazapata";
