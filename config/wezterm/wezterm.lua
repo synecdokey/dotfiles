@@ -9,6 +9,7 @@ return {
 		"nonicons",
 	}),
 	font_size = 16,
+	front_end = "WebGpu",
 	line_height = 1.375,
 	window_decorations = "RESIZE | MACOS_FORCE_DISABLE_SHADOW",
 	window_padding = {
