@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   xdg.configFile.nvim = {
     source = ./config;
     recursive = true;
@@ -13,7 +9,6 @@
     withPython3 = false;
     withRuby = false;
     withNodeJs = false;
-    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     extraPackages = with pkgs; [
       alejandra
       nil
