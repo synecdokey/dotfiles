@@ -1,7 +1,5 @@
 add_newline = false
 
-[git_branch]
-symbol = " "
 [git_status]
 format = "\\($ahead_behind$conflicted$modified$staged$renamed$deleted$untracked\\) "
 conflicted = "[✘${count}](red)"
@@ -15,14 +13,3 @@ renamed = "[»${count}](yellow)"
 untracked = "[…](white)"
 deleted = "[-${count}](yellow)"
 style = ""
-
-[lua]
-symbol = " "
-[nodejs]
-symbol = " "
-[package]
-symbol = " "
-[python]
-symbol = " "
-[rust]
-symbol = " "

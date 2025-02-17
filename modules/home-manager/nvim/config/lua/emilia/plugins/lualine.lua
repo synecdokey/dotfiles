@@ -18,19 +18,12 @@ return {
         'branch',
         {
           'diagnostics',
-          symbols = {
-            error = ' ',
-            warn = ' ',
-            info = ' ',
-            hint = ' ',
-          },
         },
       },
       lualine_c = {
         {
           'filename',
           path = 1,
-          symbols = { modified = '', readonly = '' },
         },
       },
       lualine_x = {
