@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     erlang
     fd
+    fzf
     gleam
     jq
     nodejs
