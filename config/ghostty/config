@@ -2,3 +2,16 @@ font-family = "Comic Code"
 font-size = 16
 adjust-cell-height = 37.5%
 theme = dark:terafox,light:dawnfox
+
+window-save-state = always
+
+# new_splits
+keybind = cmd+s>v=new_split:right
+keybind = cmd+s>s=new_split:down
+# split navigation
+keybind = cmd+s>h=goto_split:left
+keybind = cmd+s>l=goto_split:right
+keybind = cmd+s>j=goto_split:down
+keybind = cmd+s>k=goto_split:up
+
+custom-shader = ./cursor_smear.glsl
