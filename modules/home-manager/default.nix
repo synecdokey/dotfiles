@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [./direnv ./fish ./git ./nvim];
   home.packages = with pkgs; [
+    claude-code
     erlang
     fd
     fzf
