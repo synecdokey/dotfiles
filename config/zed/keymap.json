@@ -1,14 +1,22 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
 [
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "shift-k": "editor::Hover",
       "space p": "file_finder::Toggle",
+      "space e": "project_panel::ToggleFocus",
       "ctrl-z": "terminal_panel::ToggleFocus",
-      "left": ["workspace::ActivatePaneInDirection", "Left"],
-      "right": ["workspace::ActivatePaneInDirection", "Right"],
-      "up": ["workspace::ActivatePaneInDirection", "Up"],
-      "down": ["workspace::ActivatePaneInDirection", "Down"]
+      "left": "workspace::ActivatePaneLeft",
+      "right": "workspace::ActivatePaneRight",
+      "up": "workspace::ActivatePaneUp",
+      "down": "workspace::ActivatePaneDown"
     }
   },
   {
@@ -18,9 +26,18 @@
     }
   },
   {
-    "context": "ProjectPanel",
+    "context": "ProjectPanel || AgentPanel",
     "bindings": {
-      "%": "project_panel::NewFile"
+      "ctrl-c": "workspace::CloseActiveDock",
+      "left": "workspace::ActivatePaneLeft",
+      "right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+    "bindings": {
+      "q": "vim::MiniQuotes",
+      "b": "vim::MiniBrackets"
     }
   }
 ]
