@@ -2,7 +2,6 @@ return {
   'nvim-lualine/lualine.nvim',
   event = 'VimEnter',
   dependencies = { 'nvim-web-devicons' },
-  cond = not vim.g.vscode,
   opts = {
     sections = {
       lualine_a = {

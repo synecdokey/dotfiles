@@ -27,7 +27,6 @@ return {
         end,
       })
     end,
-    cond = not vim.g.vscode,
   },
 
   -- Surround
@@ -37,7 +36,7 @@ return {
     config = true,
   },
 
-  { 'nvim-tree/nvim-web-devicons', lazy = true, cond = not vim.g.vscode },
+  { 'nvim-tree/nvim-web-devicons', lazy = true },
 
   -- Commenting stuff semantically
   {
