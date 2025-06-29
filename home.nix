@@ -1,7 +1,7 @@
 {config, ...}: {
   nixpkgs.config.allowUnfreePredicate = pkg: true;
   home = {
-    stateVersion = "23.11";
+    stateVersion = "25.05";
     username = "emiliazapata";
     homeDirectory = "/Users/emiliazapata";
 
