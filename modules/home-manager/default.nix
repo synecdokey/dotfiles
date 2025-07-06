@@ -14,6 +14,7 @@
     rustup
     starship
     stylua
+    typescript-go
     wezterm
     yabai
     zoxide

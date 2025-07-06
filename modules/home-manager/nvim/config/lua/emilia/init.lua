@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Plugin manager boilerplate
-return require('lazy').setup('emilia.plugins', {
+require('lazy').setup('emilia.plugins', {
   defaults = { lazy = true },
   lockfile = vim.fn.getenv('HOME') .. '/dotfiles/lazy-lock.json',
   performance = {
@@ -28,3 +28,6 @@ return require('lazy').setup('emilia.plugins', {
     },
   },
 })
+
+-- Enable LSPs
+vim.lsp.enable({'tsgo'})

@@ -18,6 +18,7 @@ end
 
 return {
   'pmizio/typescript-tools.nvim',
+  enabled = false,
   ft = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
   dependencies = { 'plenary.nvim', 'nvim-lspconfig' },
   opts = {
