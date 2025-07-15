@@ -1,2 +1,174 @@
-#! /bin/sh
-python3 .git/hooks/commit-msg.py $1
+#!/usr/bin/env python3
+
+"""
+Git commit hook
+Check commit message formatting
+"""
+
+import os
+import re
+import sys
+from subprocess import call
+
+
+VALID_COMMIT_TYPES = ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'chore']
+MAX_HEADER_LENGTH = 50
+MAX_LINE_LENGTH = 72
+
+
+def has_tty():
+    """Check if we have a TTY available for interactive input."""
+    try:
+        # Check if /dev/tty exists and is accessible
+        with open('/dev/tty', 'r'):
+            return True
+    except (OSError, IOError):
+        return False
+
+
+def is_piped_input():
+    """Check if input is coming from a pipe."""
+    return len(sys.argv) == 1
+
+
+def get_editor():
+    """Get the preferred editor from environment."""
+    return os.environ.get('VISUAL', 'vim')
+
+
+def read_commit_message():
+    """Read commit message from stdin or file."""
+    if is_piped_input():
+        return sys.stdin.read().splitlines()
+    else:
+        with open(sys.argv[1], 'r') as f:
+            return f.read().splitlines()
+
+
+def filter_comments(lines):
+    """Remove comment lines from commit message."""
+    return [line for line in lines if not line.startswith("#")]
+
+
+def validate_commit_message(lines):
+    """Validate commit message format and content."""
+    if not lines:
+        raise ValueError("Empty commit message")
+
+    header = lines[0]
+
+    # Allow merge commits
+    if header.startswith("Merge"):
+        return
+
+    # Check header length
+    if len(header) > MAX_HEADER_LENGTH:
+        raise ValueError(f"Header exceeds {MAX_HEADER_LENGTH} characters: {header}")
+
+    # Check header format: type(scope): description
+    match = re.match(r'^([^(]+)\(([^)]+)\): (.+)$', header)
+    if not match:
+        raise ValueError(f"Header format should be 'type(scope): description': {header}")
+
+    commit_type, scope, description = match.groups()
+
+    # Validate commit type
+    if commit_type not in VALID_COMMIT_TYPES:
+        raise ValueError(f"Invalid commit type '{commit_type}'. Valid types: {', '.join(VALID_COMMIT_TYPES)}")
+
+    # Validate scope
+    if not scope.strip():
+        raise ValueError(f"Scope cannot be empty: {header}")
+
+    # Validate description
+    if not description.strip():
+        raise ValueError(f"Description cannot be empty: {header}")
+
+    if description[0].isupper():
+        raise ValueError(f"Description should start with lowercase: {header}")
+
+    if description.endswith('.'):
+        raise ValueError(f"Description should not end with a period: {header}")
+
+    # Check imperative mood
+    first_word = description.split()[0]
+    if first_word.endswith(('ing', 'ed')):
+        raise ValueError(f"Use imperative mood (e.g., 'change' not 'changed' or 'changing'): {header}")
+
+    # Check for leading/trailing spaces
+    if header != header.strip():
+        raise ValueError(f"Header has leading or trailing spaces: '{header}'")
+
+    # Validate body structure
+    if len(lines) > 1 and lines[1]:
+        raise ValueError("Second line must be empty")
+
+    if len(lines) > 2 and not lines[2].strip():
+        raise ValueError("Body cannot be empty if present")
+
+    # Check line lengths
+    for line in lines:
+        if len(line) > MAX_LINE_LENGTH:
+            raise ValueError(f"Line exceeds {MAX_LINE_LENGTH} characters: {line}")
+
+
+def prompt_for_edit():
+    """Prompt user to edit commit message if TTY is available."""
+    if not has_tty():
+        sys.stderr.write("No TTY available, cannot edit commit message\n")
+        return False
+
+    try:
+        with open('/dev/tty', 'r') as tty:
+            old_stdin = sys.stdin
+            sys.stdin = tty
+            response = input("Do you want to edit it? (Your commit will be rejected otherwise) [y/N] ")
+            sys.stdin = old_stdin
+            return response.lower() == 'y'
+    except (OSError, IOError):
+        sys.stderr.write("Cannot access TTY for interactive input\n")
+        return False
+
+
+def add_error_to_commit_file(error_message):
+    """Add error message as comment to commit file."""
+    if not is_piped_input():
+        with open(sys.argv[1], 'a') as f:
+            f.write(f"#\n# {error_message}\n#\n")
+
+
+def edit_commit_file():
+    """Open commit file in editor."""
+    if not is_piped_input():
+        editor = get_editor()
+        call(f'{editor} {sys.argv[1]}', shell=True)
+
+
+def main():
+    """Main function to validate commit message."""
+    while True:
+        try:
+            lines = read_commit_message()
+            filtered_lines = filter_comments(lines)
+            validate_commit_message(filtered_lines)
+            break
+        except ValueError as error:
+            sys.stderr.write(f"\nCommit message validation failed:\n{error}\n")
+
+            if is_piped_input():
+                sys.exit(1)
+
+            if prompt_for_edit():
+                add_error_to_commit_file(str(error))
+                sys.stderr.write('\n')
+                edit_commit_file()
+                continue
+            else:
+                sys.stderr.write("Exiting without committing\n")
+                sys.exit(1)
+
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()
