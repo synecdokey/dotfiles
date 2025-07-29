@@ -9,5 +9,3 @@ vim.keymap.set({ 'n', 'v' }, vim.g.mapleader, '<nop>')
 
 -- Load all plugins
 require('emilia')
-
-vim.cmd.colorscheme('everforest')
