@@ -6,6 +6,7 @@
     fd
     fzf
     gleam
+    jujutsu
     jq
     nodejs
     nodePackages.pnpm
