@@ -10,7 +10,6 @@
     jq
     nodejs
     nodePackages.pnpm
-    raycast
     ripgrep
     rustup
     starship
