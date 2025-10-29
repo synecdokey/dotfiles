@@ -1,7 +1,7 @@
 font-family = "Comic Code"
 font-size = 16
 adjust-cell-height = 37.5%
-theme = dark:Everforest Dark - Hard,light:Everforest Light - Med
+theme = dark:Melange Dark,light:Melange Light
 background-opacity = 0.9
 background-blur = true
 

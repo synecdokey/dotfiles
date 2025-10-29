@@ -30,4 +30,6 @@ require('lazy').setup('emilia.plugins', {
 })
 
 -- Enable LSPs
-vim.lsp.enable({'tsgo'})
+vim.lsp.enable({ 'tsgo' })
+
+vim.cmd.colorscheme('melange')
