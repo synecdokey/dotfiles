@@ -7,8 +7,6 @@
 
   programs.git = {
     enable = true;
-    userName = "Emilia Zapata";
-    userEmail = "zapata.contact@gmail.com";
     includes = [
       {
         condition = "gitdir:~/work/";
@@ -22,8 +20,14 @@
         };
       }
     ];
-
-    extraConfig = {
+    settings = {
+      user = {
+        name = "Emilia Zapata";
+        email = "zapata.contact@gmail.com";
+      };
+      alias = {
+        l = "log --graph --decorate --pretty=format:'%C(auto)%h %Cblue%ad %Cred%aN %C(auto)%d %n    %s' --date=human";
+      };
       core = {
         editor = "nvim";
         excludesfile = "~/.config/git/ignore_global";
@@ -51,10 +55,6 @@
       rerere = {
         enabled = true;
       };
-    };
-
-    aliases = {
-      l = "log --graph --decorate --pretty=format:'%C(auto)%h %Cblue%ad %Cred%aN %C(auto)%d %n    %s' --date=human";
     };
   };
 
