@@ -1,12 +1,11 @@
 {pkgs, ...}: {
-  imports = [./direnv ./fish ./git ./nvim];
+  imports = [./direnv ./fish ./git ./nvim ./jujutsu];
   home.packages = with pkgs; [
     claude-code
     erlang
     fd
     fzf
     gleam
-    jujutsu
     jq
     nodejs
     nodePackages.pnpm
